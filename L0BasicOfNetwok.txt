@@ -1,0 +1,17 @@
+					Netwok 
+Type of Network
+1)LAN ->Local Area Netwok
+2)WAN ->Metropolitan Area Netwok
+3)MAN ->Wide Area Netwok
+
+ISP -> Internet Service Provider
+
+DN -> Domin Name
+DNS -> Doiman Name System  =Convrting your domain name to a specifc IP Address
+
+IP -> Internet protocall 
+	IPV4 -> Internet protocall Version 4
+	IPV6 -> Internet protocall Version 6
+
+Protocal -> Rules
+URL -> Uniform Resource Locatar
