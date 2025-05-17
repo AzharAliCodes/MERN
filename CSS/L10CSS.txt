@@ -1,0 +1,202 @@
+		 CSS Box Model & Display Properties
+
+ 📦 Box Model
+In CSS, every element on a webpage follows the box model, which consists of four parts:
+
+1️⃣ Content → The actual text or image inside the element.  
+2️⃣ Padding → Space between the content and the border.  
+3️⃣ Border → The boundary that surrounds the padding & content.  
+4️⃣ Margin → Space outside the border, separating it from other elements.
+
+👉 Diagram Representation:
+
++----------------------------+   <- Margin
+|  +----------------------+  |   <- Border
+|  |  +--------------+   |  |   <- Padding
+|  |  |   Content   |   |  |   <- Content
+|  |  +--------------+   |  |
+|  +----------------------+  |
++----------------------------+
+
+
+---
+
+ 🟡 Padding in CSS
+Padding creates space inside an element, between its content and border.
+
+ 🔹 Individual Padding Properties
+- padding-top: 10px;
+- padding-right: 20px;
+- padding-bottom: 10px;
+- padding-left: 20px;
+
+ 🔹 Shorthand for Padding
+✅ Example:
+css
+div {
+  padding: 10px; / Applies padding to all sides /
+}
+
+✅ Example (Different Values):
+css
+div {
+  padding: 10px 20px 30px 40px; / Top Right Bottom Left /
+}
+
+✅ Example (Top-Bottom & Left-Right):
+css
+div {
+  padding: 10px 20px; / Top-Bottom 10px, Left-Right 20px /
+}
+
+✅ Example (Top & Left-Right, Bottom):
+css
+div {
+  padding: 10px 20px 30px; / Top 10px, Left-Right 20px, Bottom 30px /
+}
+
+
+---
+
+ 🔴 Margin in CSS
+Margin creates space outside the border, separating it from other elements.
+
+ 🔹 Individual Margin Properties
+- margin-top: 10px;
+- margin-right: 20px;
+- margin-bottom: 10px;
+- margin-left: 20px;
+
+ 🔹 Shorthand for Margin
+✅ Example:
+css
+div {
+  margin: 10px; / Applies margin to all sides /
+}
+
+✅ Example (Different Values):
+css
+div {
+  margin: 10px 20px 30px 40px; / Top Right Bottom Left /
+}
+
+✅ Example (Auto Centering Horizontally):
+css
+div {
+  margin: auto;
+  width: 50%;
+}
+
+💡 Problem with margin: auto;?
+- margin: auto; works only when a width is defined.
+
+---
+
+ 🟢 Border in CSS
+Border creates a visible boundary around an element.
+
+ 🔹 Individual Border Properties
+- border-width: 2px;
+- border-style: solid;
+- border-color: black;
+
+ 🔹 Shorthand for Border
+✅ Example:
+css
+div {
+  border: 2px solid black;
+}
+
+
+---
+
+ 📏 Box Sizing in CSS
+By default, width and height apply only to content (not padding or border).
+
+ 🔹 Default (content-box)
+- width = only content width  
+- Padding & Border are extra
+css
+div {
+  width: 200px;
+  padding: 20px;
+}
+
+📌 Final width = 200px (content) + 20px (left padding) + 20px (right padding) = 240px  
+
+ 🔹 box-sizing: border-box;
+- width includes padding & border.
+css
+div {
+  width: 200px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+📌 Final width remains 200px, including padding.
+
+💡 Best Practice:
+css
+ {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+🔹 Why?  
+- Removes browser default margins/padding.  
+- Ensures consistent width calculations.
+
+---
+
+ 🖼️ Display Properties in CSS
+ 1️⃣ display: none;
+- The element disappears completely (not taking up space).
+css
+div {
+  display: none;
+}
+
+
+ 2️⃣ display: block;
+- Takes full width by default.
+- Starts on a new line.
+- Example elements: <div>, <p>, <h1>, <section>.
+css
+div {
+  display: block;
+}
+
+
+ 3️⃣ display: inline;
+- Takes only the necessary width.
+- Does not start on a new line.
+- Example elements: <span>, <a>, <strong>.
+css
+span {
+  display: inline;
+}
+
+
+ 4️⃣ display: inline-block;
+- Acts like inline, but allows width, height, and margins.
+css
+button {
+  display: inline-block;
+  width: 100px;
+  margin: 10px;
+}
+
+💡 Why use inline-block?
+- Unlike inline, it allows margin & padding.
+
+---
+
+ 🎯 Summary
+ Property | Function |
+----------|------------|
+ margin | Creates space outside the element. |
+ padding | Creates space inside the element. |
+ border | Adds a boundary around the element. |
+ box-sizing: border-box; | Ensures width includes padding & border. |
+ display: inline-block; | Like inline, but allows margin & width. |

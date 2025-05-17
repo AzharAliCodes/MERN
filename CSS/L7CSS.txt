@@ -1,0 +1,186 @@
+			 Types of CSS  
+
+CSS (Cascading Style Sheets) is used to style HTML elements. There are three types of CSS:  
+
+ 1. Inline CSS  
+- Applied directly inside an HTML element using the style attribute.  
+- Used for quick styling but not recommended for large projects.  
+
+✅ Example:  
+html
+<p style="color: red; font-size: 20px;">This is inline CSS</p>
+
+🚨 Priority: Highest (Overrides both internal and external CSS).  
+
+---
+
+ 2. Internal CSS  
+- Written inside a <style> tag in the <head> section of an HTML document.  
+- Used when styles are specific to a single page.  
+
+✅ Example:  
+html
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        p {
+            color: blue;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <p>This is internal CSS</p>
+</body>
+</html>
+
+🚨 Priority: Lower than inline CSS but higher than external CSS.  
+
+---
+
+ 3. External CSS  
+- Written in a separate file (.css) and linked using the <link> tag in the <head> section.  
+- Best for large projects because it keeps design separate from HTML.  
+
+✅ Example:  
+
+🔹 CSS file (styles.css):  
+css
+p {
+    color: green;
+    font-size: 16px;
+}
+
+🔹 HTML file (index.html):  
+html
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <p>This is external CSS</p>
+</body>
+</html>
+
+🚨 Priority: Lowest (but still useful for site-wide styling).  
+
+---
+
+ <link> Tag Attributes  
+The <link> tag connects an external CSS file to an HTML document.  
+
+✅ Attributes in <link>:  
+1. rel="stylesheet" → Specifies the relationship between the HTML and the CSS file.  
+2. href="styles.css" → Specifies the path to the CSS file.  
+
+✅ Example:  
+html
+<link rel="stylesheet" href="styles.css">
+
+
+---
+
+ CSS Selectors  
+
+CSS selectors are used to apply styles to specific HTML elements.
+
+ 1. Tag Selector  
+- Targets all elements of a specific tag.  
+
+✅ Example:  
+css
+p {
+    color: blue;
+}
+
+✔️ This applies the style to all <p> tags.
+
+---
+
+ 2. Class Selector (.)  
+- Targets elements with a specific class name.  
+- Multiple elements can have the same class.  
+
+✅ Example:  
+
+🔹 CSS:  
+css
+.my-class {
+    color: red;
+    font-weight: bold;
+}
+
+🔹 HTML:  
+html
+<p class="my-class">This is styled using a class</p>
+
+
+---
+
+ 3. ID Selector (#)  
+- Targets an individual element with a unique ID.  
+- Each ID must be unique in a document.  
+
+✅ Example:  
+
+🔹 CSS:  
+css
+#unique-id {
+    background-color: yellow;
+}
+
+🔹 HTML:  
+html
+<p id="unique-id">This is styled using an ID</p>
+
+
+🚨 Priority Order:  
+Inline CSS > ID Selector > Class Selector > Tag Selector  
+
+---
+
+ Pseudo-classes in CSS  
+
+Pseudo-classes apply styles to elements based on their state or position.
+
+ 1. :hover  
+- Styles an element when the user hovers over it.  
+
+✅ Example:  
+css
+button:hover {
+    background-color: blue;
+    color: white;
+}
+
+html
+<button>Hover me!</button>
+
+✔️ When you hover over the button, it turns blue.
+
+---
+
+ 2. nth-child(n)  
+- Targets the nth child of a parent element.  
+
+✅ Example:  
+css
+li:nth-child(2) {
+    color: red;
+}
+
+html
+<ul>
+    <li>Item 1</li> <!-- Not affected -->
+    <li>Item 2</li> <!-- Turns red -->
+    <li>Item 3</li> <!-- Not affected -->
+</ul>
+
+✔️ The second <li> turns red.
+
+✅ Other variations:  
+- nth-child(odd) → Selects odd elements.  
+- nth-child(even) → Selects even elements.  
+- nth-child(3n+1) → Selects every 3rd element starting from 1.  

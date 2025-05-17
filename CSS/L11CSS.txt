@@ -1,0 +1,152 @@
+		 CSS Positions & Other Important Properties  
+
+ 📌 Position Property in CSS
+The position property defines how an element is placed on the webpage.  
+
+ 1️⃣ position: static; (Default)
+- The default position for all elements.
+- Elements appear in the normal document flow.
+- Doesn't respond to top, left, right, or bottom.  
+
+✅ Example:
+css
+.box {
+  position: static;
+  top: 50px;  / ❌ Won't work /
+  left: 50px; / ❌ Won't work /
+}
+
+
+---
+
+ 2️⃣ position: relative;
+- Moves the element relative to itself (its normal position).
+- Other elements are not affected (it still occupies space).
+- Works with top, bottom, left, right.
+
+✅ Example:
+css
+.box {
+  position: relative;
+  top: 20px;  / Moves down 20px /
+  left: 30px; / Moves right 30px /
+}
+
+🚀 Key Use: Used as a reference for absolute positioning.
+
+---
+
+ 3️⃣ position: absolute;
+- The element comes out of the normal flow (doesn’t take up space).
+- Moves relative to the nearest positioned ancestor (relative, absolute, fixed, sticky).
+- If no ancestor is positioned, it moves relative to <html>.
+
+✅ Example:
+css
+.parent {
+  position: relative; / Important /
+  width: 300px;
+  height: 300px;
+  background: lightblue;
+}
+
+.child {
+  position: absolute;
+  top: 50px;   / Moves down 50px from .parent /
+  left: 50px;  / Moves right 50px from .parent /
+  width: 100px;
+  height: 100px;
+  background: red;
+}
+
+💡 Key Point: Always set position: relative; on the parent to make absolute positioning predictable.
+
+---
+
+ 4️⃣ position: fixed;
+- The element is fixed in place even when scrolling.
+- Positioned relative to the viewport (browser window).
+- Always stays visible.
+
+✅ Example:
+css
+.fixed-box {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  width: 100px;
+  height: 50px;
+  background: green;
+}
+
+📌 Use case: Sticky navigation bars, floating buttons.
+
+---
+
+ 5️⃣ position: sticky;
+- Behaves like relative until a certain scroll point, then becomes fixed.
+- Needs top, left, right, or bottom to work.
+
+✅ Example:
+css
+.sticky-box {
+  position: sticky;
+  top: 0px; / Sticks to the top when scrolling /
+  background: yellow;
+  padding: 10px;
+}
+
+📌 Use case: Table headers, sticky navigation.
+
+---
+
+ 🟠 z-index Property (Layering Elements)
+- Defines which element appears on top when they overlap.
+- Higher z-index value = Higher priority.
+
+✅ Example:
+css
+.box1 {
+  position: absolute;
+  z-index: 1;
+  background: red;
+}
+
+.box2 {
+  position: absolute;
+  z-index: 2; / Higher value, so it appears on top /
+  background: blue;
+}
+
+💡 Note: z-index only works on positioned elements (relative, absolute, fixed, sticky).
+
+---
+
+ 🖱️ Cursor Property
+Defines how the mouse cursor looks when hovering over an element.
+
+ 🔹 Common Cursor Types
+| Property          | Description |
+|------------------|-------------|
+| cursor: default; | Normal arrow cursor |
+| cursor: pointer; | Hand cursor (for buttons/links) |
+| cursor: text; | Text selection (like in input fields) |
+| cursor: move; | Move icon (for draggable elements) |
+| cursor: not-allowed; | Disabled cursor |
+| cursor: crosshair; | Cross cursor |
+| cursor: wait; | Loading cursor |
+
+✅ Example:
+css
+.button {
+  cursor: pointer;
+}
+
+
+---
+
+ 📌 Best Practices
+🔹 Use position: relative; on parents when using absolute.  
+🔹 Use position: fixed; for navigation bars.  
+🔹 Use position: sticky; for headers.  
+🔹 Always set z-index for overlapping elements.  

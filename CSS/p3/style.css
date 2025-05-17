@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;   
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh; 
+    background-image: url("bg.jpg");
+    background-size: cover;
+}
+.glass{
+    display: flex;   
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10%;
+    width: 50%;
+    height: 70%;
+    background-color: #86868652;
+    backdrop-filter: blur(1px);
+    gap:10px;
+}
+
+.input{
+    display: flex;   
+    flex-direction:column;
+    gap: 20px;
+    width: 50%;
+
+}
+
+.cb_fp{
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+    gap: 150px;
+    margin-top: 20px;
+}
+
+h1{
+    font-size: 70px;
+    font-family: "Special Gothic Expanded One", sans-serif;
+    font-weight: 400px;
+    font-style: normal;
+
+}
+.a{
+    font-size: 20px;
+    font-weight: bold;  
+}
+p{
+    text-decoration: underline;
+    font-size: 20px;
+}
+input[type="text"], input[type="password"]{
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+button{
+    width: 120px;
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    background: linear-gradient(rgb(248, 232, 232), rgb(110, 110, 110));
+}

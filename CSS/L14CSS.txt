@@ -1,0 +1,150 @@
+ Transition (Meaning)
+Transition means a smooth change from one style to another.  
+For example: when you move your mouse over a button and the button slowly changes its color — that's a transition.
+
+---
+
+ Basic Transition Properties
+1. transition-duration
+- It controls how long the transition takes.
+- Example:  
+  transition-duration: 1s; → It will take 1 second to change.
+
+---
+
+2. transition-timing-function
+- It controls how the speed of the transition will behave during the change.
+- Different types:
+  - ease → Starts slow, becomes fast, then slow at the end (default).
+  - ease-in → Starts slow, then becomes fast.
+  - ease-out → Starts fast, then becomes slow.
+  - ease-in-out → Slow at start, fast in middle, slow at end.
+  - cubic-bezier() → You can create your own speed style by adjusting the curve (you can use "Inspect Element" in browser and adjust the graph/curve).
+
+---
+
+3. transition-delay
+- It controls how much time to wait before starting the transition.
+- Example:  
+  transition-delay: 0.5s; → Wait for half a second, then start the change.
+
+---
+
+4. transition-property
+- It controls which property you want to animate (like background-color, width, height, etc.)
+- Example:  
+  transition-property: background-color; → Only color will change smoothly.
+
+---
+
+✏️ Syntax (Short-hand for transition)
+css
+transition: property duration timing-function delay;
+
+
+Example:
+css
+transition: background-color 1s ease-in 0.5s;
+
+Meaning: Change background-color in 1 second, with ease-in, after 0.5 seconds delay.
+
+---
+
+🔥 Transform (Meaning)
+Transform means to change the shape, size, or position of an element.
+
+---
+
+🎯 Basic Transform Examples
+
+1. translateX(50px)
+- Move the element 50 pixels to the right (X-axis is horizontal).
+- Positive value → move right.
+- Negative value → move left.
+
+Example:
+css
+transform: translateX(50px);
+
+(Moves right 50px)
+
+---
+
+2. translateY(50px)
+- Move the element 50 pixels downward (Y-axis is vertical).
+- Positive value → move down.
+- Negative value → move up.
+
+Example:
+css
+transform: translateY(50px);
+
+(Moves down 50px)
+
+---
+
+3. Move Both X and Y Together
+css
+transform: translate(50px, 50px);
+
+Meaning:  
+- Move right 50px (X-axis),
+- Move down 50px (Y-axis) at the same time.
+
+---
+
+🌀 Other Types of Transform
+Rotate
+- Rotate the element.
+- Example:
+  css
+  transform: rotate(45deg);
+  
+  → Rotates 45 degrees clockwise.
+
+---
+
+Skew
+- Tilt the element in X or Y direction.
+- Example:
+  css
+  transform: skew(20deg, 10deg);
+  
+  → Tilts sideways (X: 20deg, Y: 10deg).
+
+---
+
+Scale
+- Make the element bigger or smaller.
+- Example:
+  css
+  transform: scale(1.5);
+  
+  → 1.5 times bigger.
+
+---
+
+Perspective
+- Used for 3D effects (like looking at a box in 3D).
+
+---
+
+⚡ 2D and 3D Transform
+
+| 2D Transform | 3D Transform |
+|:---|:---|
+| Works on X and Y axes (left-right, up-down). | Works on X, Y, and Z axes (left-right, up-down, and closer/farther). |
+| Example: rotate(45deg) | Example: rotateX(45deg), rotateY(45deg), rotateZ(45deg) |
+
+---
+
+📚 Summary Table
+
+| Property | Meaning |
+|:---|:---|
+| transition | Smooth change between styles |
+| transition-duration | Time taken to change |
+| transition-timing-function | Speed pattern of change |
+| transition-delay | Wait time before starting change |
+| transition-property | What thing will change |
+| transform | Move, rotate, skew, or scale element |

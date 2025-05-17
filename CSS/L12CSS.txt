@@ -1,0 +1,114 @@
+     CSS Units Explained  
+
+CSS provides two types of units to define sizes, spacing, and positioning:  
+1️⃣ Absolute Units (Fixed & Do Not Change)  
+2️⃣ Relative Units (Flexible & Depend on Parent or Viewport)  
+
+---
+
+ 1️⃣ Absolute Units (Fixed Size)
+Absolute units do not change based on screen size or parent elements. They are fixed measurements.  
+
+| Unit | Meaning | Example |
+|------|---------|---------|
+| px | Pixels (Most Used) | width: 200px; |
+| cm | Centimeters | width: 5cm; |
+| mm | Millimeters | height: 50mm; |
+| in | Inches (1in = 2.54cm) | width: 2in; |
+
+✅ Example:
+css
+.box1 {
+  width: 300px; / Fixed width, will not change /
+  height: 100px;
+  background: lightblue;
+}
+
+💡 Best for: Fixed elements like icons, small buttons.
+
+---
+
+ 2️⃣ Relative Units (Flexible & Responsive)
+Relative units depend on:
+✔ Parent size  
+✔ Viewport size  
+✔ Font size  
+
+---
+
+ 🔹 px vs %
+| Unit | Meaning |
+|------|---------|
+| px | Fixed size (doesn’t change) |
+| % | Percentage of parent element |
+
+✅ Example:
+css
+.parent {
+  width: 400px;
+  height: 200px;
+  background: lightgray;
+}
+
+.child {
+  width: 50%;  / Takes 50% of parent width /
+  height: 50%; / Takes 50% of parent height /
+  background: red;
+}
+
+💡 Use % for: Responsive layouts.
+
+---
+
+ 🔹 vw (Viewport Width) & vh (Viewport Height)
+- 1vw = 1% of the viewport width (browser width).
+- 1vh = 1% of the viewport height (browser height).  
+
+✅ Example:
+css
+.fullscreen {
+  width: 100vw; / Full width of the screen /
+  height: 100vh; / Full height of the screen /
+  background: blue;
+}
+
+💡 Use vw & vh for: Full-screen sections.
+
+---
+
+ 🔹 em & rem (Font-Based Units)
+📌 em  
+- Relative to the parent's font size.  
+- 1em = 100% of parent’s font size.  
+
+📌 rem  
+- Relative to the root font size (html).  
+- 1rem = 100% of root font size.  
+
+✅ Example:
+css
+html {
+  font-size: 16px; / Root font size /
+}
+
+.parent {
+  font-size: 20px;
+}
+
+.child {
+  font-size: 2em;  / 2  parent font size (20px  2 = 40px) /
+}
+
+.child2 {
+  font-size: 2rem; / 2  root font size (16px  2 = 32px) /
+}
+
+💡 Use rem for: Consistent font sizing across the website.
+
+---
+
+ 🎯 Best Practices
+✔ Use px for precise elements like icons.  
+✔ Use %, vw, vh for responsive layouts.  
+✔ Use rem for consistent font sizes.  
+✔ Avoid cm, mm, in unless for print designs.  

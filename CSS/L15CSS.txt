@@ -1,0 +1,150 @@
+Animation (Meaning)
+
+Animation in CSS means changing the style of an element step-by-step over time.
+
+Example: A box that moves, changes color, or grows bigger without JavaScript.
+
+---
+
+  Animation Properties (Basic & Simple)
+
+ 1. animation-name
+- The name of your animation (must match @keyframes).
+- Example:  
+  animation-name: slideRight;
+
+---
+
+ 2. animation-duration
+- How long the animation takes to complete.
+- Example:  
+  animation-duration: 2s; → Takes 2 seconds.
+
+---
+
+ 3. animation-timing-function
+- Speed style of the animation (same as transition):
+  - ease – slow > fast > slow
+  - linear – same speed all the time
+  - ease-in – slow at start
+  - ease-out – slow at end
+  - ease-in-out – slow start and end
+
+---
+
+ 4. animation-delay
+- Wait time before animation starts.
+- Example:  
+  animation-delay: 1s; → Waits 1 second before starting.
+
+---
+
+ 5. animation-iteration-count
+- How many times the animation should run.
+- Examples:
+  - 1 → Run once
+  - 3 → Run 3 times
+  - infinite → Keep running forever
+
+---
+
+ 6. animation-direction
+- Which direction the animation should run:
+  - normal – Start to end
+  - reverse – End to start
+  - alternate – First forward, then backward
+  - alternate-reverse – First backward, then forward
+
+---
+
+ 7. animation-fill-mode
+- Controls what style should be kept before or after the animation runs.
+- Values:
+  - none – No styles stay (default)
+  - forwards – Final (last) style stays
+  - backwards – First style appears before animation starts
+  - both – Keeps first and last styles
+
+Difference Example:
+
+| fill-mode | What stays visible |
+|-----------|--------------------|
+| forwards | Last style after animation ends |
+| backwards | First style before animation begins |
+| both | First + Last styles |
+| none | No styles stay |
+
+---
+
+ 📝 Syntax (Short-hand for animation)
+css
+animation: name duration timing-function delay iteration-count direction fill-mode;
+
+
+✅ Example:
+css
+animation: slideRight 2s ease-in 1s infinite alternate forwards;
+
+Meaning:  
+- Animation name = slideRight  
+- Duration = 2 seconds  
+- Speed = starts slow  
+- Wait = 1 second  
+- Repeat = forever  
+- Direction = forward and backward  
+- After animation ends, last style stays  
+
+---
+
+ 🎬 @keyframes (The Heart of Animation)
+
+The @keyframes rule defines what changes in your animation.
+
+ 🔹 Basic Structure:
+css
+@keyframes slideRight {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(200px);
+  }
+}
+
+This will move the element 200px to the right.
+
+---
+
+ 🔹 Using Percentages
+
+You can break it into more steps:
+css
+@keyframes moveAround {
+  0%   { transform: translateX(0); }
+  25%  { transform: translateY(100px); }
+  50%  { transform: translateX(100px); }
+  75%  { transform: translateY(0); }
+  100% { transform: translateX(0); }
+}
+
+This moves the element in a square path: right → down → left → up.
+
+---
+
+ 🔹 Direction Examples
+
+- Left:
+  css
+  transform: translateX(-100px);
+  
+- Right:
+  css
+  transform: translateX(100px);
+  
+- Up:
+  css
+  transform: translateY(-100px);
+  
+- Down:
+  css
+  transform: translateY(100px);

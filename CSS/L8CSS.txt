@@ -1,0 +1,158 @@
+	      Font Properties in CSS
+Font properties define how text appears in an HTML document.
+
+1️⃣ font-size  
+   - Sets the size of the text.  
+   - ✅ Example:  
+     css
+     p {
+       font-size: 20px;
+     }
+     
+   - Units: px, em, rem, %, vw, vh
+
+2️⃣ font-family  
+   - Specifies the typeface (font style) to be used.  
+   - ✅ Example:  
+     css
+     p {
+       font-family: Arial, sans-serif;
+     }
+     
+
+3️⃣ font-weight  
+   - Controls the thickness of text.  
+   - ✅ Example:  
+     css
+     p {
+       font-weight: bold; / or values: 100, 200, ..., 900 /
+     }
+     
+
+4️⃣ font-style  
+   - Defines if the text should be italic, normal, or oblique.  
+   - ✅ Example:  
+     css
+     p {
+       font-style: italic;
+     }
+     
+
+---
+
+ What is Lorem Ipsum?
+- Lorem Ipsum is a placeholder text used in design and development.
+- It automatically generates dummy text to test layouts.
+- ✅ Example in HTML:  
+  html
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  
+- ✅ Example in Emmet:  
+  - Typing lorem10 → Generates 10 words of dummy text  
+  - Typing lorem → Generates default dummy text  
+
+---
+
+ Text Properties in CSS
+These properties control the appearance of text.
+
+1️⃣ text-align  
+   - Aligns text inside a block element.  
+   - ✅ Example:  
+     css
+     p {
+       text-align: center;
+     }
+     
+   - Values: left, right, center, justify
+
+2️⃣ text-decoration  
+   - Adds or removes text decorations (underline, overline, etc.).  
+   - ✅ Example:  
+     css
+     p {
+       text-decoration: underline;
+     }
+     
+   - Values: underline, overline, line-through, none  
+   - Additional Styles: dotted, dashed, wavy
+
+3️⃣ text-transform  
+   - Changes the capitalization of text.  
+   - ✅ Example:  
+     css
+     p {
+       text-transform: uppercase;
+     }
+     
+   - Values: uppercase, lowercase, capitalize
+
+4️⃣ text-shadow  
+   - Adds a shadow to text.  
+   - ✅ Example:  
+     css
+     p {
+       text-shadow: 2px 2px 5px gray;
+     }
+     
+   - Values:  
+     - x-offset (horizontal)  
+     - y-offset (vertical)  
+     - blur-radius  
+     - color
+
+5️⃣ Remove Text Shadow  
+   - ✅ Example:  
+     css
+     p {
+       text-shadow: none;
+     }
+     
+
+---
+
+ Hover Effect Example
+This changes the background color when the user hovers over an element.
+
+css
+.Heading {
+  background-color: red;
+}
+
+.Heading:hover {
+  background-color: blue;
+}
+
+
+---
+
+ Border Properties in CSS
+Borders define the boundary of an element.
+
+1️⃣ Basic Border Syntax
+   css
+   p {
+     border: 2px solid black;
+   }
+   
+   - Syntax: border: size style color;
+   - Styles: solid, dashed, dotted, double, groove, ridge, inset, outset
+
+2️⃣ border-radius  
+   - Rounds the corners of an element.  
+   - ✅ Example:  
+     css
+     div {
+       border-radius: 10px;
+     }
+     
+
+3️⃣ Apply Border to One Side
+   - ✅ Example:  
+     css
+     p {
+       border-top: 2px solid red;
+       border-right: none;
+       border-bottom: 2px solid blue;
+       border-left: none;
+     }
