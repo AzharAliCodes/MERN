@@ -1,0 +1,193 @@
+1. <a> (Anchor) Tag – Uses & Attributes  
+
+The <a> tag is used to create hyperlinks for navigation, calling, and email.  
+
+🔹 Attributes of <a> Tag:  
+- href="URL" → Defines the link destination.  
+- target="_blank" → Opens the link in a new tab.  
+- title="Tooltip" → Shows additional info on hover.  
+- download="filename" → Allows file downloads.  
+- rel="nofollow" → Tells search engines not to follow the link.  
+
+ Examples:  
+
+ (1) Linking to Another Website:  
+html
+<a href="https://www.example.com" target="_blank" title="Go to Example">Visit Example</a>
+
+
+ (2) Calling a Number:  
+html
+<a href="tel:+1234567890">Call Us</a>
+
+
+ (3) Sending an Email:  
+html
+<a href="mailto:example@email.com">Send an Email</a>
+
+
+---
+
+ 2. Block Elements & Inline Elements  
+
+ Block Elements  
+🔹 Definition: Block elements take up the full width of the page, forcing content to a new line.  
+
+🔹 Common Block Elements:  
+- <div>, <p>, <h1>-<h6>, <ul>, <table>, <section>  
+
+ Example:  
+html
+<p style="border: 1px solid black;">This is a Block element</p>
+
+
+---
+
+ Inline Elements  
+🔹 Definition: Inline elements only take up as much space as their content and do not start on a new line.  
+
+🔹 Common Inline Elements:  
+- <span>, <a>, <b>, <i>, <strong>, <em>  
+
+ Example:  
+html
+<b style="border: 1px solid red;">This is an Inline element</b>
+
+
+---
+
+ 3. <div> & <span> Elements  
+
+ <div> – Block-Level Container /Parent Class 
+🔹 Definition: A <div> (division) is a block-level element used to group content for styling or layout.  
+
+🔹 Attributes of <div>:  
+- id="name" → Gives a unique ID to the <div>.  
+- class="name" → Groups multiple elements under the same class.  
+- style="CSS" → Allows inline styling.  
+
+ Example:  
+html
+<div style="background-color: lightgray; padding: 10px;">
+    This is inside a div.
+</div>
+
+
+🔹 Making <div> Inline:  
+By default, <div> is a block element, but you can make it inline using CSS:  
+html
+<div style="display: inline-block; background-color: yellow;">This is an inline div</div>
+
+
+---
+
+ <span> – Inline-Level Container  
+🔹 Definition: A <span> is an inline element used to apply styles to specific text parts.  
+
+ Example:  
+html
+<p>This is a <span style="color: red;">highlighted</span> word.</p>
+
+
+🔹 Making <span> Block:  
+By default, <span> is inline, but you can make it block using CSS:  
+html
+<span style="display: block; background-color: cyan;">This is a block span</span>
+
+
+---
+
+ 4. <iframe> Tag – Embedding External Content  
+
+🔹 Definition: The <iframe> tag is used to embed another webpage, map, or video inside a web page.  
+
+🔹 Attributes of <iframe>:  
+- src="URL" → Specifies the embedded content’s source.  
+- width="value" → Defines the width of the iframe.  
+- height="value" → Defines the height of the iframe.  
+- allowfullscreen → Enables full-screen mode.  
+- frameborder="0" → Removes iframe border.  
+
+ Example – Embedding a Google Map:  
+html
+<iframe 
+    src="https://www.google.com/maps/embed?pb=..." 
+    width="600" height="400" 
+    style="border:0;" 
+    allowfullscreen>
+</iframe>
+
+
+ Example – Embedding a YouTube Video:  
+html
+<iframe 
+    width="560" height="315" 
+    src="https://www.youtube.com/embed/VIDEO_ID" 
+    frameborder="0" allowfullscreen>
+</iframe>
+
+
+---
+
+ 5. Media Tags – Adding Images, Audio, and Video  
+
+ (1) <img> – Adding Images  
+🔹 Attributes of <img>:  
+- src="image.jpg" → Specifies the image file path.  
+- alt="description" → Alternative text if the image doesn’t load.  
+- width="px" → Defines the width.  
+- height="px" → Defines the height.  
+
+ Example:  
+html
+<img src="image.jpg" alt="Example Image" width="300">
+
+
+---
+
+ (2) <audio> – Adding Audio  
+🔹 Attributes of <audio>:  
+- src="file.mp3" → Specifies the audio file.  
+- controls → Adds play/pause buttons.  
+- autoplay → Plays audio automatically.  
+- loop → Repeats audio continuously.  
+- muted → Starts audio in a muted state.  
+
+ Example:  
+html
+<audio src="audio.mp3" controls loop></audio>
+
+
+---
+
+ (3) <video> – Adding Video  
+🔹 Attributes of <video>:  
+- src="file.mp4" → Specifies the video file.  
+- controls → Adds play/pause buttons.  
+- autoplay → Plays the video automatically.  
+- loop → Repeats the video continuously.  
+- muted → Starts the video muted.  
+- poster="image.jpg" → Adds a thumbnail before playing.  
+
+ Example:  
+html
+<video src="video.mp4" controls width="500" poster="thumbnail.jpg"></video>
+
+
+---
+
+ 6. Folder Navigation – Accessing Files  
+
+🔹 Accessing a file in the same folder:  
+html
+<img src="./image.jpg">
+
+
+🔹 Accessing a file in a parent folder:  
+html
+<img src="../image.jpg">
+
+
+---
+
+This version keeps your instructions while improving clarity, fixing errors, and adding useful attributes. Let me know if you need any changes! 😊🚀

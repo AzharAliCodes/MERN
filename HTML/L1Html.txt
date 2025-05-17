@@ -1,0 +1,11 @@
+			Types of tag
+1)Slef Closing
+	-This tag are self closing in nature you dont need to addintanally close this tag
+	-ex= br , img , link
+
+2)closing tag
+	-This tag are closing in nature you need to addintanally close this tag
+	-ex= html , body
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+HEAD tag store meta data

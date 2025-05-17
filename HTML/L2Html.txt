@@ -1,0 +1,149 @@
+ 1. Comments in HTML  
+html
+<!-- This is a comment -->
+
+- Comments in HTML start with <!-- and end with -->.  
+- They are not displayed in the browser but are useful for documentation.  
+
+---
+
+ 2. HTML Headings  
+HTML provides six levels of headings, from <h1> (largest) to <h6> (smallest).  
+
+html
+<h1>Heading 1</h1>
+<h2>Heading 2</h2>
+<h3>Heading 3</h3>
+<h4>Heading 4</h4>
+<h5>Heading 5</h5>
+<h6>Heading 6</h6>
+
+
+🔹 Usage: Headings are used to define titles and subtitles in web pages.  
+🔹 SEO Tip: <h1> is the most important heading and should be used for the main page title.  
+
+---
+
+ 3. Paragraph Tag  
+html
+<p>This is a paragraph.</p>
+
+- The <p> tag is used to define paragraphs.  
+- Browsers automatically add some space (margin) before and after paragraphs.  
+
+---
+
+ 4. Types of Tags in HTML  
+
+ (1) Structure Tags  
+Used to define the structure of an HTML document.  
+Examples:  
+html
+<html>, <head>, <body>
+
+
+ (2) Semantic Tags  
+These tags provide meaning to the content.  
+Examples:  
+html
+<article>, <title>, <main>, <nav>, <footer>, <section>, <aside>
+
+🔹 Why use Semantic Tags?  
+- They improve SEO.  
+- They make the code more readable and accessible.  
+
+ (3) Formatting Tags  
+Used for styling text.  
+Examples:  
+html
+<b>Bold</b>
+<i>Italic</i>
+<mark>Highlighted</mark>
+<s>Strikethrough</s>
+
+
+---
+
+ 5. Special Text Formatting  
+
+ Superscript & Subscript
+html
+x<sup>2</sup>   <!-- Superscript -->
+H<sub>2</sub>O <!-- Subscript -->
+
+🔹 Example:  
+- Superscript: x²  
+- Subscript: H₂O  
+
+ Strong (Bold) & Mark (Highlight)  
+html
+<strong>Important Text</strong> 
+<mark>Highlighted Text</mark>
+
+
+ Strikethrough Text  
+html
+<s>Strikethrough</s>
+
+🔹 Example: ~~Strikethrough~~  
+
+---
+
+ 6. Horizontal Line  
+html
+<hr>
+
+- Creates a horizontal line to separate content.  
+- Used for thematic breaks.  
+
+---
+
+ 7. Attributes in HTML  
+Every HTML tag can have attributes to provide additional information.  
+html
+<tagname attribute="value">
+
+ Example: Image Tag with src and alt Attributes  
+html
+<img src="image.jpg" alt="Description of image">
+
+🔹 src (Source): Defines the image URL.  
+🔹 alt (Alternative text): Shown if the image fails to load.  
+
+---
+
+ 8. Anchor (<a>) Tag - Links  
+html
+<a href="https://www.example.com">Visit Example</a>
+
+🔹 href Attribute: Specifies the URL.  
+
+ Opening Link in a New Tab  
+html
+<a href="https://www.example.com" target="_blank">Open in New Tab</a>
+
+🔹 target="_blank": Opens the link in a new tab.  
+
+---
+
+ 9. Blockquote Tag  
+Used to indicate long quotes.  
+html
+<blockquote>
+  This is a blockquote example. It is used for longer quotations.
+</blockquote>
+
+🔹 It adds indentation by default.  
+
+---
+
+ Additional Information  
+
+ Difference Between <b> and <strong>
+- <b> makes text bold but has no extra meaning.  
+- <strong> makes text bold and indicates importance.  
+
+ Difference Between <i> and <em>
+- <i> makes text italic for styling.  
+- <em> makes text italic but also gives emphasis (important for screen readers).  
+

@@ -1,0 +1,212 @@
+	Types of Lists in HTML  
+There are three types of lists in HTML:  
+1. Ordered List (<ol>) – Displays items in a numbered sequence.  
+2. Unordered List (<ul>) – Displays items with bullet points.  
+3. Definition List (<dl>) – Displays terms and their descriptions.  
+
+---
+
+ 2. Ordered List (<ol>)  
+🔹 Definition: An ordered list is used for items that must follow a sequence.  
+
+🔹 Attributes of <ol>:  
+- type="1" → Numbers (default)  
+- type="A" → Uppercase letters  
+- type="a" → Lowercase letters  
+- type="I" → Roman numerals (uppercase)  
+- type="i" → Roman numerals (lowercase)  
+- start="value" → Starts numbering from a specific value  
+
+ Example:
+html
+<ol type="A" start="3">
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+</ol>
+
+Output:  
+C. Item 1  
+D. Item 2  
+E. Item 3  
+
+---
+
+ 3. Unordered List (<ul>)  
+🔹 Definition: An unordered list is used when the order doesn’t matter.  
+
+🔹 Attributes of <ul>:  
+- type="disc" → Default bullet  
+- type="circle" → Hollow circles  
+- type="square" → Square bullets  
+
+ Example:  
+html
+<ul type="square">
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+</ul>
+
+Output:  
+■ Item 1  
+■ Item 2  
+■ Item 3  
+
+---
+
+ 4. Definition List (<dl>)  
+🔹 Definition: A definition list is used for terms and their descriptions.  
+
+ Example:  
+html
+<dl>
+    <dt>HTML</dt>
+    <dd>HyperText Markup Language</dd>
+
+    <dt>CSS</dt>
+    <dd>Cascading Style Sheets</dd>
+</dl>
+
+Output:  
+HTML  
+&nbsp;&nbsp;&nbsp; HyperText Markup Language  
+CSS  
+&nbsp;&nbsp;&nbsp; Cascading Style Sheets  
+
+---
+
+ 5. Nested List  
+🔹 Definition: A nested list is a list inside another list.  
+
+ Example:  
+html
+<ul>
+    <li>Fruits
+        <ul>
+            <li>Apple</li>
+            <li>Banana</li>
+        </ul>
+    </li>
+    <li>Vegetables
+        <ol type="I">
+            <li>Carrot</li>
+            <li>Potato</li>
+        </ol>
+    </li>
+</ul>
+
+Output:  
+- Fruits  
+  - Apple  
+  - Banana  
+- Vegetables  
+  I. Carrot  
+  II. Potato  
+
+---
+		Emmet
+What is Emmet?
+Emmet is a powerful abbreviation tool used in HTML and CSS to write code faster by expanding short snippets into full-fledged code structures. It is commonly used in text editors like VS Code, Sublime Text, and Atom to speed up web development.
+
+Instead of manually typing long HTML or CSS code, you can write short abbreviations, and Emmet will automatically expand them into complete code.
+
+ Emmet Abbreviations
+1. Symbols & Their Meaning
+> → Creates a child element
++ → Creates a sibling element
+^ → Moves up a level in the hierarchy
+* → Multiplies elements (creates multiple copies)
+{} → Defines content inside elements
+$ → Adds numbering (auto-increment)
+() → Groups elements together
+
+---
+
+ 2. Basic Emmet Examples  
+
+ 1. Creating Multiple Elements  
+ Emmet:  
+html
+ul>li3
+
+ Expands to:  
+html
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+
+
+---
+
+ 2. Adding Text Inside Elements  
+ Emmet:  
+html
+p{Hello World}
+
+ Expands to:  
+html
+<p>Hello World</p>
+
+
+---
+
+ 3. Creating Sibling Elements (+)  
+ Emmet:  
+html
+h1+p
+
+ Expands to:  
+html
+<h1></h1>
+<p></p>
+
+
+---
+
+ 4. Creating Nested Elements (>)  
+ Emmet:  
+html
+div>ul>li
+
+ Expands to:  
+html
+<div>
+    <ul>
+        <li></li>
+    </ul>
+</div>
+
+
+---
+
+ 5. Numbering with $  
+ Emmet:  
+html
+ul>li.item$3
+
+ Expands to:  
+html
+<ul>
+    <li class="item1"></li>
+    <li class="item2"></li>
+    <li class="item3"></li>
+</ul>
+
+
+---
+
+ 6. Grouping with ()  
+ Emmet:  
+html
+div>(h1+p)+footer
+
+ Expands to:  
+html
+<div>
+    <h1></h1>
+    <p></p>
+</div>
+<footer></footer>

@@ -1,0 +1,132 @@
+ 1. Styling a Table using <style>  
+The <style> tag is used to write CSS, which can be applied to tables for styling.  
+Example:  
+html
+<style>
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+    th {
+        background-color: lightgray;
+    }
+</style>
+
+Here, we applied a border to the table, merged borders, and gave a background color to <th>.
+
+---
+
+ 2. Basic Table Tags  
+- <table> → Creates a table  
+- <tr> → Defines a table row  
+- <td> → Defines a table data cell  
+- <th> → Defines a header cell  
+- <caption> → Adds a title to the table  
+
+ Example: Simple Table  
+html
+<table>
+    <tr>
+        <td>R1 column 1</td>
+        <td>R1 column 2</td>
+    </tr>
+    <tr>
+        <td>R2 column 1</td>
+        <td>R2 column 2</td>
+    </tr>
+</table>
+
+
+---
+
+ 3. Merging Rows and Columns
+- rowspan → Merges rows  
+- colspan → Merges columns  
+
+ Example: Merging Cells  
+html
+<table>
+    <tr>
+        <th>Name</th>
+        <th colspan="2">Details</th>
+    </tr>
+    <tr>
+        <td rowspan="2">John</td>
+        <td>Age</td>
+        <td>25</td>
+    </tr>
+    <tr>
+        <td>Country</td>
+        <td>USA</td>
+    </tr>
+</table>
+
+
+---
+
+ 4. Table Sections (<thead>, <tbody>, <tfoot>)  
+- <thead> → Defines the table header  
+- <tbody> → Contains the main table data  
+- <tfoot> → Defines the footer  
+
+ Example: Table with <thead>, <tbody>, and <tfoot>  
+html
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Country</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Ali</td>
+            <td>22</td>
+            <td>India</td>
+        </tr>
+        <tr>
+            <td>Zoya</td>
+            <td>24</td>
+            <td>UK</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="3">Total Entries: 2</td>
+        </tr>
+    </tfoot>
+</table>
+
+💡 Note: If <th> styling is not working, remember to add th in the <style> section.
+
+---
+
+ 5. Column Grouping using <colgroup>  
+The <colgroup> tag is used to style multiple columns together.  
+
+ Example: Using <colgroup> for Styling  
+html
+<table>
+    <colgroup>
+        <col span="1" style="background-color: aqua;">
+        <col span="2" style="background-color: lightgray;">
+    </colgroup>
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Country</th>
+    </tr>
+    <tr>
+        <td>Ali</td>
+        <td>22</td>
+        <td>India</td>
+    </tr>
+    <tr>
+        <td>Zoya</td>
+        <td>24</td>
+        <td>UK</td>
+    </tr>
+</table>
+
+Here, the first column has a blue background, and the next two columns have a gray background.

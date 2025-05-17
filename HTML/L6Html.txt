@@ -1,0 +1,130 @@
+	Form Elements  
+- <form> → Used to create an HTML form.  
+- <input> → Used to take user input.  
+- <label> → Used to assign a name to an input field.  
+- <textarea> → Used for multi-line text input (like a paragraph box).  
+- <select> → Used to create a dropdown list.  
+
+---
+
+ 2. Attributes in Form Elements  
+
+ type Attribute in <input>
+The type attribute defines what kind of input the user can provide.  
+
+✅ Common type values in <input>:  
+- text → A simple text input.  
+- password → A password field (hidden characters).  
+- email → Accepts only a valid email format.  
+- number → Accepts numeric values.  
+- date → Allows the user to select a date.  
+- file → Allows file uploads.  
+- radio → Used for selecting one option from multiple choices.  
+- checkbox → Used for multiple selections.  
+- submit → A button that submits the form.  
+- reset → A button that resets the form fields.  
+- button → A clickable button.  
+- search → A text input styled for search functionality.  
+- tel → Accepts phone numbers.  
+- url → Accepts only valid URLs.  
+
+---
+
+ 3. Important Attributes in Forms  
+
+✅ for Attribute (Used in <label>)  
+- The for attribute links a label to an input field using the same id value.  
+- When the user clicks the label, it automatically focuses on the input field.  
+
+✅ id Attribute (Used in <input>)  
+- The id attribute uniquely identifies an input field.  
+- It must match the for attribute in <label>.  
+
+ Example of <label> with for and id
+html
+<form>
+    <label for="username">Enter Name:</label>
+    <input type="text" id="username">
+</form>
+
+
+✅ name Attribute (Used in <input> and <select>)  
+- Groups multiple input fields with the same name.  
+- Used mostly for radio buttons and checkboxes to link options together.  
+
+ Example of Radio Buttons using name
+html
+<form>
+    <label>Choose Gender:</label>
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">Male</label>
+
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Female</label>
+</form>
+
+💡 Since both radio buttons have name="gender", only one can be selected at a time.
+
+✅ action Attribute  
+- Defines where the form data will be sent after submission.  
+- Usually points to a backend script (.php, .aspx, .jsp, etc.).  
+
+✅ method Attribute  
+- Specifies how data is sent to the server.  
+  - GET → Appends form data in the URL (not secure).  
+  - POST → Sends form data securely in the request body.  
+
+ Example of action and method
+html
+<form action="submit.php" method="POST">
+    <input type="text" name="username">
+    <input type="submit" value="Submit">
+</form>
+
+🔹 When you click "Submit", data is sent to submit.php.  
+
+✅ placeholder Attribute  
+- Displays background text inside an input field.  
+
+ Example of placeholder
+html
+<input type="text" placeholder="Enter your name">
+
+
+✅ Submit Button (type="submit")  
+- A button that submits the form.  
+
+ Example
+html
+<input type="submit" value="Send Data">
+
+
+---
+
+ 4. Example of a Full Form
+html
+<form action="submit.php" method="POST">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" placeholder="Enter your name"><br><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="Enter your email"><br><br>
+
+    <label>Gender:</label>
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">Male</label>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Female</label><br><br>
+
+    <label for="comments">Comments:</label>
+    <textarea id="comments" name="comments"></textarea><br><br>
+
+    <label for="country">Choose Country:</label>
+    <select id="country" name="country">
+        <option value="india">India</option>
+        <option value="usa">USA</option>
+        <option value="uk">UK</option>
+    </select><br><br>
+
+    <input type="submit" value="Submit">
+</form>
