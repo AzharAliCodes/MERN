@@ -321,53 +321,43 @@ button:hover > img{
     font-weight: 500;
 }
 
-/* .thirdSection{
+.thirdSection{
     overflow: hidden;
 }
 
 .firstBday{
-    
-    margin-top: 80px;
     display: flex;
     justify-content: center;
+    margin-top: 10px;
     align-items: center;
-    gap: 200px;
+    gap: 300px;
 }
 
-.leftPart p:nth-child(1){
-    overflow: hidden;
-    font-size: 3.8em;
-    line-height: 63px;
+.leftPart > p:nth-child(1){
+    text-align: left;
+    font-size: 4em;
+    font-weight: 500;
 }
-.leftPart p:nth-child(2){
- 
-    line-height: 22px;
-    padding-top: 20px;
+
+.firstBday_bgChange{
+    background-color: black;
+    color: white;
 }
-.learnMore {
+
+.learnMore > img{
+    rotate: 180deg;
+}
+
+.leftPart{
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center; 
-} 
-.learnMore > span {
-    width: 300px;
-    display: inline-block;
-    padding-top: 40px;
-    font-size: 16px;
-    text-decoration: 2px underline #25d366 ;
 }
 
-.learnMore::before{
+.learnMore{
+    margin-top: 30px;
     position: absolute;
     content: "";
-    width: 23%;
-    bottom: 0%;
-    height: 2px;
-    background-color: #25d366;
-}
 
-.learnMore > img {
-    margin-left: 10px;
-    rotate: 180deg;
-} */
+    height: 3px;
+    background-color: #25d366;
+    bottom: 0;
+}
