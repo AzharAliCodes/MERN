@@ -348,16 +348,46 @@ button:hover > img{
     rotate: 180deg;
 }
 
-.leftPart{
+/* .leftPart{
     position: relative;
-}
+} */
 
 .learnMore{
     margin-top: 30px;
     position: absolute;
-    content: "";
+     display:flex;
+    justify-content: center; 
+    gap: 16px;
+}
 
-    height: 3px;
-    background-color: #25d366;
+.stylish_p {
+    position: relative;
+}
+.stylish_underline {
+    position: absolute;
     bottom: 0;
+    left: 0;
+    height: 2px ;
+    width: 100%;
+    background-color: green;
+}
+
+.lern{
+    margin-top: 3px;
+    height: 15px;
+}
+
+.firstBday_bgChange{
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+.leftPart > p > span{
+    color: #25d366;
+}
+
+.abcd{
+    fill:white;
 }
