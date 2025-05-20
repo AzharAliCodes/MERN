@@ -340,17 +340,14 @@ button:hover > img{
 }
 
 .firstBday_bgChange{
-    background-color: black;
+    background-color: rgba(43, 43, 43, 0.932);
     color: white;
 }
 
-.learnMore > img{
+.learnMore > img, .black_in_white{
     rotate: 180deg;
 }
 
-/* .leftPart{
-    position: relative;
-} */
 
 .learnMore{
     margin-top: 30px;
@@ -372,7 +369,7 @@ button:hover > img{
     background-color: green;
 }
 
-.lern{
+.lern,.black_in_white{
     margin-top: 3px;
     height: 15px;
 }
@@ -384,10 +381,17 @@ button:hover > img{
     align-items: center;
     gap: 100px;
 }
+
 .leftPart > p > span{
     color: #25d366;
 }
+.rightPart-groupchat{
+    position: relative;
+}
 
-.abcd{
-    fill:white;
+.grp{
+    position: absolute;
+    left: 0; 
+    bottom: 0;
+    margin-bottom: 50px;
 }
