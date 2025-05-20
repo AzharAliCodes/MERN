@@ -392,6 +392,6 @@ button:hover > img{
 .grp{
     position: absolute;
     left: 0; 
-    bottom: 0;
-    margin-bottom: 50px;
+    top: 130px;
+    height: 100px;
 }
