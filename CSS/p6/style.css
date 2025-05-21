@@ -328,6 +328,7 @@ button:hover > img{
 .firstBday{
     display: flex;
     justify-content: center;
+    padding: 150px;
     margin-top: 10px;
     align-items: center;
     gap: 300px;
@@ -394,4 +395,8 @@ button:hover > img{
     left: 0; 
     top: 130px;
     height: 100px;
+}
+
+.firstBday > p:nth-child(2){
+    margin-top: 100px;
 }
