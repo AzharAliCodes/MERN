@@ -455,6 +455,30 @@ button:hover > img{
 }
 
 footer{
+    display: flex;
     background-color: black;
     color: white;
+    width: 100vw;
+    justify-content: center;
+    padding: 70px;
+}
+.table > div > P{
+    color: rgba(255, 255, 255, 0.699);
+    padding-bottom: 15px;;
+}
+.table{
+    display: flex;
+    gap: 30px;
+}
+
+.footer-upper > img{
+    padding-bottom: 70px;
+}
+
+.footer-upper{
+    padding-right: 70px;
+}
+
+.table-list > ul > li{
+    margin-bottom: 17px;
 }
