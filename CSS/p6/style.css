@@ -453,3 +453,8 @@ button:hover > img{
 .learnMore-c{
     bottom: 150px;
 }
+
+footer{
+    background-color: black;
+    color: white;
+}
