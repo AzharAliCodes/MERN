@@ -345,12 +345,12 @@ button:hover > img{
     color: white;
 }
 
-.learnMore > img, .black_in_white{
+.learnMore > img, .black_in_white,.learnMore-c > img, .black_in_white{
     rotate: 180deg;
 }
 
 
-.learnMore{
+.learnMore,.learnMore-c{
     margin-top: 30px;
     position: absolute;
      display:flex;
@@ -407,4 +407,49 @@ button:hover > img{
 
 .p-w{
     line-height: 1.5;
+}
+
+.firstBday-firstBday2{
+    /* display:flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 100px;
+    border: 2px solid red; */
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    position: relative;
+    
+}
+
+.def{
+    position: relative;
+    
+}
+.rightPart-beach {
+    padding-left: 100px;
+    display: flex;
+}
+.beach{
+    position: absolute;
+    width: 340px;
+    left: 100px; 
+    top: 170px;
+}
+
+.leftPart-c > p:nth-child(1){
+    text-align: left;
+    font-size: 4em;
+    font-weight: 500;
+}
+
+.leftPart-c{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 1px;
+}
+
+.learnMore-c{
+    bottom: 150px;
 }
