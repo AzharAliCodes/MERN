@@ -164,4 +164,45 @@ button {
 }
 
 
-@media (max-width: 575px) {}
+@media (max-width: 575px) {
+    .glass {
+        width: 80%;
+        height: 70%;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+        font-size: 15px;
+    }
+
+    .input {
+        width: 70%;
+    }
+
+    .cb_fp {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-top: 20px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    body {
+        font-weight: 300;
+    }
+
+    p {
+        font-size: 15px;
+    }
+
+    .a {
+        font-size: 15px;
+        font-weight: 700;
+    }
+
+    h1 {
+    font-size: 60px;
+    font-weight: 100px;
+}
+}
