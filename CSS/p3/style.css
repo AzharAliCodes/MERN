@@ -56,7 +56,6 @@ h1 {
     font-family: "Special Gothic Expanded One", sans-serif;
     font-weight: 400px;
     font-style: normal;
-
 }
 
 .a {
@@ -145,11 +144,8 @@ button {
     .cb_fp {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
-        gap: 150px;
+        justify-content: space-evenly;
         margin-top: 20px;
-        padding-left: 100px;
-        padding-right: 100px;
     }
 
     body {
@@ -157,8 +153,14 @@ button {
     }
 
     p {
-        font-size: 20px;
+        font-size: 15px;
     }
+
+    .a {
+        font-size: 15px;
+        font-weight: 700;
+    }
+
 }
 
 
