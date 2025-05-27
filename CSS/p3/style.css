@@ -1,21 +1,31 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.container{
-    display: flex;   
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.container {
+    display: flex;
     justify-content: center;
     align-items: center;
     width: 100vw;
-    height: 100vh; 
+    height: 100vh;
     background-image: url("bg.jpg");
     background-size: cover;
 }
-.glass{
-    display: flex;   
-    flex-direction:column;
+
+.glass {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     border-radius: 10%;
@@ -23,48 +33,51 @@
     height: 70%;
     background-color: #86868652;
     backdrop-filter: blur(1px);
-    gap:10px;
+    gap: 10px;
 }
 
-.input{
-    display: flex;   
-    flex-direction:column;
+.input {
+    display: flex;
+    flex-direction: column;
     gap: 20px;
     width: 50%;
-
 }
 
-.cb_fp{
+.cb_fp {
     display: flex;
-    flex-direction: row; 
+    flex-direction: row;
     justify-content: space-between;
     gap: 150px;
     margin-top: 20px;
 }
 
-h1{
+h1 {
     font-size: 70px;
     font-family: "Special Gothic Expanded One", sans-serif;
     font-weight: 400px;
     font-style: normal;
 
 }
-.a{
+
+.a {
     font-size: 20px;
-    font-weight: bold;  
+    font-weight: bold;
 }
-p{
+
+p {
     text-decoration: underline;
     font-size: 20px;
 }
-input[type="text"], input[type="password"]{
+
+input[type="text"],
+input[type="password"] {
     padding: 10px;
     border: none;
     border-radius: 5px;
     font-size: 20px;
 }
 
-button{
+button {
     width: 120px;
     margin-top: 20px;
     padding: 10px;
@@ -73,3 +86,73 @@ button{
     font-size: 20px;
     background: linear-gradient(rgb(248, 232, 232), rgb(110, 110, 110));
 }
+
+
+@media (min-width: 1200px) {
+    .glass {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10%;
+        width: 80%;
+        height: 70%;
+        background-color: #86868652;
+        backdrop-filter: blur(1px);
+        gap: 10px;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    .glass {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10%;
+        width: 80%;
+        height: 70%;
+        background-color: #86868652;
+        backdrop-filter: blur(1px);
+        gap: 10px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .glass {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10%;
+        width: 70%;
+        height: 70%;
+        background-color: #86868652;
+        backdrop-filter: blur(1px);
+        gap: 10px;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+        font-size: 15px;
+    }
+
+    .input {
+        width: 70%;
+    }
+
+    .cb_fp {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 150px;
+        margin-top: 20px;
+        padding-left: 100px;
+        padding-right: 100px; 
+        font-size: 1px;
+    }
+}
+
+
+@media (max-width: 575px) {}
