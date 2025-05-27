@@ -1,2 +1,2 @@
-# java-script
-Learning js 
+# Learning
+Full stack MERN
