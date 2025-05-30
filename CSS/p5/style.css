@@ -72,10 +72,14 @@ body {
     gap: 30px;
 }
 
-.rightNav :nth-child(3) {
+.rightNav :nth-child(4) {
     height: 25px;
     border: 1px solid black;
     border-radius: 50%;
+}
+
+.rightNav :nth-child(1) {
+    opacity: 0;
 }
 
 .ytpremium {
@@ -96,10 +100,12 @@ body {
 }
 
 .ytdesc>h2 {
+    margin: auto;
     text-align: center;
     font-weight: 600;
     font-size: 32px;
     line-height: 40px;
+    width: 60%;
 }
 
 .yuPremiumDetails {
@@ -324,10 +330,22 @@ hr {
     background-color: #a4a4a4;
 }
 
-@media screen  and (max-width:480px) {
+@media screen and (max-width:480px) {
+    .centerNav {
+        display: none;
+    }
 
+    .rightNav :nth-child(1) {
+        opacity: 10;
+    }
+
+    .rightNav :nth-child(2) {
+        display: none;
+    }
+
+    .ytdesc>h2 {
+        width: 100%;
+    }
 }
 
-@media screen and (min-width:481px) and (max-width:768px) {
-
-}
+@media screen and (min-width:481px) and (max-width:768px) {}
