@@ -1,24 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@200&display=swap');
 
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
 
-html, body{
+html,
+body {
     overflow-x: hidden;
 }
 
-.container{
+.container {
     width: 100vw;
     height: 100vh;
-} 
+}
 
-.navbar{
+.navbar {
     position: sticky;
-    top: 0; 
+    top: 0;
     background-color: black;
     display: flex;
     justify-content: space-between;
@@ -26,23 +27,23 @@ html, body{
     padding: 13px 15px;
 }
 
-.leftNav{
+.leftNav {
     display: flex;
-    gap:20px;
+    gap: 20px;
 
 }
 
-.leftNav img:nth-child(2){
+.leftNav img:nth-child(2) {
     width: 90px;
 }
 
-.centerNav{
+.centerNav {
     width: 60%;
     display: flex;
     justify-content: center;
 }
 
-.centerNav > input{
+.centerNav>input {
     /* Download colur picker for enhcing */
     background-color: black;
     font-size: 17px;
@@ -55,35 +56,34 @@ html, body{
     color: white;
 }
 
-.centerNav img:nth-child(2){
+.centerNav img:nth-child(2) {
     padding: 3px 10px;
     background-color: #222222;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
 }
 
-.centerNav img:nth-child(3){
+.centerNav img:nth-child(3) {
     margin-left: 10px;
 }
 
-.rightNav{
+.rightNav {
     display: flex;
     gap: 30px;
 }
 
-.rightNav :nth-child(3){
+.rightNav :nth-child(3) {
     height: 25px;
     border: 1px solid black;
     border-radius: 50%;
 }
 
-.ytpremium{
-    background: #aa4b6b; 
-   background: -webkit-linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b);  
-   background: linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b); 
-
-    padding-top: 40px ;
-    padding-top: 40px ;
+.ytpremium {
+    background: #aa4b6b;
+    background: -webkit-linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b);
+    background: linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b);
+    padding-top: 40px;
+    padding-top: 40px;
     font-family: Roboto, Arial, sans-serif;
     height: 70%;
     display: flex;
@@ -91,17 +91,18 @@ html, body{
     justify-content: center;
     align-items: center;
     gap: 40px;
-    margin-bottom: 30px;
+    color: white;
+    padding-bottom: 30px;
 }
 
-.ytdesc > h2{
+.ytdesc>h2 {
     text-align: center;
     font-weight: 600;
     font-size: 32px;
     line-height: 40px;
 }
 
-.yuPremiumDetails{
+.yuPremiumDetails {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -109,10 +110,10 @@ html, body{
     /* css peeper extenstion use for font copy extenation at the timr colonig a webiste  */
     justify-content: center;
     align-items: center;
-    
+
 }
 
-.yuPremiumDetails > button{
+.yuPremiumDetails>button {
     padding: 10px 15px;
     border-radius: 20px;
     width: 40%;
@@ -121,23 +122,22 @@ html, body{
     background-color: #3ea6ff;
 }
 
-.yuPremiumDetails p:nth-child(2){
-      font-size: 25px;
+.yuPremiumDetails p:nth-child(2) {
+    font-size: 25px;
 }
 
-.annual{
+.annual {
     color: #76c4ff;
 }
 
-.yuPremiumDetails p:nth-child(4){
+.yuPremiumDetails p:nth-child(4) {
     color: #3ebaff;
 }
 
-.features{
+.features {
     background-color: black;
     color: white;
     display: flex;
-    color: white;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -146,22 +146,26 @@ html, body{
     height: 300px;
 }
 
-.features div:nth-child(1),.features div:nth-child(2),.features div:nth-child(3){
+.features div:nth-child(1),
+.features div:nth-child(2),
+.features div:nth-child(3) {
     width: 25%;
     height: 70%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center; 
+    align-items: center;
     gap: 20px;
     margin-bottom: 50px;
 }
 
-.features div:nth-child(1) > p,.features div:nth-child(2) > p,.features div:nth-child(3) > p{
-    color:rgb(155, 155, 155);
+.features div:nth-child(1)>p,
+.features div:nth-child(2)>p,
+.features div:nth-child(3)>p {
+    color: rgb(155, 155, 155);
 }
 
-.bg1{
+.bg1 {
     background-image: url(bg1.jpeg);
     height: 60%;
     background-size: cover;
@@ -174,18 +178,18 @@ html, body{
     padding-left: 50%;
 }
 
-.bg1 > h1{
+.bg1>h1 {
     font-weight: 10;
 }
 
-.bg1 > p{
-    color:rgb(155, 155, 155);
+.bg1>p {
+    color: rgb(155, 155, 155);
     opacity: 0.9;
     font-weight: bold;
 }
 
 
-.bg2{
+.bg2 {
     background-image: url(bg2.jpeg);
     height: 60%;
     background-size: cover;
@@ -198,17 +202,17 @@ html, body{
     padding-left: 25%;
 }
 
-.bg2 > h1{
+.bg2>h1 {
     font-weight: 10;
 }
 
-.bg2 > p{
-    color:rgb(155, 155, 155);
+.bg2>p {
+    color: rgb(155, 155, 155);
     opacity: 0.9;
     font-weight: bold;
 }
 
-.bg3{
+.bg3 {
     background-image: url(bg3.jpeg);
     height: 60%;
     background-size: cover;
@@ -221,16 +225,17 @@ html, body{
     padding-left: 50%;
 }
 
-.bg3 > h1{
+.bg3>h1 {
     font-weight: 10;
 }
 
-.bg3 > p{
-    color:rgb(155, 155, 155);
+.bg3>p {
+    color: rgb(155, 155, 155);
     opacity: 0.9;
     font-weight: bold;
 }
-.bg4{
+
+.bg4 {
     background-image: url(bg4.jpeg);
     height: 60%;
     background-size: cover;
@@ -243,17 +248,17 @@ html, body{
     padding-left: 25%;
 }
 
-.bg4 > h1{
+.bg4>h1 {
     font-weight: 10;
 }
 
-.bg4 > p{
-    color:rgb(155, 155, 155);
+.bg4>p {
+    color: rgb(155, 155, 155);
     opacity: 0.9;
     font-weight: bold;
 }
 
-.faqs{
+.faqs {
     padding: 40px;
     display: flex;
     flex-direction: column;
@@ -264,59 +269,65 @@ html, body{
     gap: 40px;
 }
 
-.faqDetail{
+.faqDetail {
     width: 50%;
     display: flex;
     flex-direction: column;
     gap: 30px;
 }
 
-.drop{
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 0px;
-  font-size: 18px;
-  font-weight: bold;
+.drop {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0px;
+    font-size: 18px;
+    font-weight: bold;
 }
 
-.faqDetail > p{
+.faqDetail>p {
     font-size: 25px;
     font-weight: 800;
 }
 
-hr{
+hr {
     opacity: 0.4;
 }
 
-.helpCenter{
+.helpCenter {
     width: 50%;
 }
-.helpCenter > p {
+
+.helpCenter>p {
 
     font-size: 20px;
     font-weight: 800;
 }
 
-.helpCenter > p > span {
+.helpCenter>p>span {
     color: #3ebaff;
 }
 
-*::-webkit-scrollbar-track
-{
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-	border-radius: 10px;
-	background-color: #000000;
+*::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: #000000;
 }
 
-*::-webkit-scrollbar
-{
-	width: 10px;
-	background-color: #000000;
+*::-webkit-scrollbar {
+    width: 10px;
+    background-color: #000000;
 }
 
-*::-webkit-scrollbar-thumb
-{
-	border-radius: 10px;
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-	background-color: #a4a4a4;
+*::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color: #a4a4a4;
+}
+
+@media screen  and (max-width:480px) {
+
+}
+
+@media screen and (min-width:481px) and (max-width:768px) {
+
 }
