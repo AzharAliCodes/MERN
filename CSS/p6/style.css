@@ -503,9 +503,17 @@ footer{
     display: flex;
     justify-content: space-between;
     width: 60%;
+    margin-left: 17%;
 }
 
 .lowerleft{
     display: flex;
+    gap: 10px;
 }
 
+.lowerright > select{
+    padding: 20px 50px;
+    border-radius: 30px;
+    background-color: black;
+    color: white;
+}
