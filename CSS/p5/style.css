@@ -398,13 +398,20 @@ hr {
     .features div:nth-child(1)>h2,
     .features div:nth-child(2)>h2,
     .features div:nth-child(3)>h2 {
-        width: 80%;
+        width: 50%;
+        padding-bottom: 0;
+        margin-bottom: 0;
     }
 
     .features div:nth-child(1)>p,
     .features div:nth-child(2)>p,
     .features div:nth-child(3)>p {
-        width: 82%;
+        margin-top: 0;
+        padding-top: 0;
+        width: 62%;
+        font-size: 1.3rem;
+        color: rgb(185, 184, 184);
+        font-weight: bold;
     }
 
     .features div:nth-child(1),
