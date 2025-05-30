@@ -14,7 +14,7 @@
 }
 
 .navbar{
-    display: flex;
+    display: flex; 
     justify-content: space-between;
     padding: 30px;
     font-size: larger;
@@ -455,13 +455,14 @@ button:hover > img{
 }
 
 footer{
-    background-color: black;
+    background-color: #111b21;
     color: white;
     width: 100vw;
     padding: 70px;
 }
 .footer{
     display: flex;
+    flex-direction: column;
     justify-content: center;
 }
 .table > div > P{
@@ -481,6 +482,12 @@ footer{
     padding-right: 70px;
 }
 
+.test{
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+}
+
 .table-list > ul > li{
     margin-bottom: 17px;
 }
@@ -490,3 +497,15 @@ footer{
     padding-left: 225px;
     width: 1000px;
 }
+
+.lower{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+}
+
+.lowerleft{
+    display: flex;
+}
+
