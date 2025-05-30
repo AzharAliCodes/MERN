@@ -1,0 +1,104 @@
+ 🧱 What is Grid in CSS?
+
+CSS Grid is a layout system that allows you to create complex web layouts easily using rows and columns. It’s a two-dimensional system — meaning it can handle both rows and columns.
+
+---
+
+ 🔄 Grid vs Flexbox: What's the Difference?
+
+| Feature        | CSS Grid                         | Flexbox                           |
+| -------------- | -------------------------------- | --------------------------------- |
+| Direction      | Two-dimensional (rows + columns) | One-dimensional (row or column) |
+| Layout Control | Entire layout at once            | One item at a time                |
+| Best For       | Page or section layouts          | Components or small UI pieces     |
+| Alignment      | Rows & columns independently     | Along the main/cross axis only    |
+
+---
+
+ 🛠️ Common Grid Properties
+
+ 🔹 display: grid;
+
+Enables grid layout on a container.
+
+---
+
+ 🔹 Grid Track Definition
+
+ grid-template-rows: Defines row sizes.
+
+  css
+  grid-template-rows: 100px 200px;
+  
+
+ grid-template-columns: Defines column sizes.
+
+  css
+  grid-template-columns: 1fr 2fr;
+  
+
+---
+
+ 🔹 Grid Item Placement
+
+ grid-row-start: Start line for the item row.
+
+ grid-row-end: End line for the item row.
+
+ grid-column-start: Start line for the item column.
+
+ grid-column-end: End line for the item column.
+
+ grid-area: Shorthand for all four:
+
+  css
+  grid-area: row-start / column-start / row-end / column-end;
+  
+
+---
+
+ 🔹 Auto Grid Behavior
+
+ grid-auto-columns: Defines size for implicitly created columns.
+ grid-auto-rows: (Not listed in your note but often used) defines size for implicit rows.
+ grid-auto-flow: Controls auto-placement direction (row or column).
+
+   Values: row, column, dense
+
+---
+
+ 🔹 Grid Gaps
+
+ grid-gap: Shorthand for setting row and column gaps.
+
+  css
+  grid-gap: 20px;
+  
+
+---
+
+ 🔹 Grid Areas
+
+ grid-template-areas: Define named areas for visual layout.
+
+  css
+  grid-template-areas: 
+    "header header"
+    "sidebar content";
+  
+
+---
+
+ 🧮 Useful Grid Functions
+
+ fr (fractional unit): Divides space in relation to available space.
+
+  css
+  grid-template-columns: 1fr 2fr;
+  
+
+ repeat(n, value): Repeat a value multiple times.
+
+  css
+  grid-template-columns: repeat(3, 1fr);
+  
