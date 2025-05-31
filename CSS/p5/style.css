@@ -417,10 +417,177 @@ hr {
     .features div:nth-child(1),
     .features div:nth-child(2),
     .features div:nth-child(3) {
-         width: 100%;
-         margin-top: 130px;
-         margin-bottom: 130px;
+        width: 100%;
+        margin-top: 130px;
+        margin-bottom: 130px;
     }
+
+    .bg1 {
+        background-image: url(bg1.jpeg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        justify-content: end;
+        line-height: 25px;
+        padding-left: 5%;
+        padding-bottom: 5%;
+        height: 260px;
+    }
+
+    .bg2 {
+        background-image: url(bg2.jpeg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        justify-content: end;
+        line-height: 25px;
+        padding-left: 5%;
+        padding-bottom: 5%;
+        height: 260px;
+    }
+
+    .bg3 {
+        background-image: url(bg3.jpeg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        justify-content: end;
+        line-height: 25px;
+        padding-left: 5%;
+        padding-bottom: 5%;
+        height: 260px;
+    }
+
+    .bg4 {
+        background-image: url(bg4.jpeg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        justify-content: end;
+        line-height: 25px;
+        padding-left: 5%;
+        padding-bottom: 5%;
+        height: 260px;
+    }
+
 }
 
-    @media screen and (min-width:481px) and (max-width:768px) {}
+@media screen and (min-width:481px) and (max-width:768px) {
+    .centerNav {
+        display: none;
+    }
+
+    .rightNav :nth-child(1) {
+        opacity: 10;
+    }
+
+    .rightNav :nth-child(2) {
+        display: none;
+    }
+
+    .ytdesc>h2 {
+        width: 100%;
+    }
+
+    .yuPremiumDetails p:nth-child(2) {
+        width: 85%;
+    }
+
+    .yuPremiumDetails p:nth-child(3) {
+        margin-top: 15px;
+        width: 85%;
+        margin-bottom: 15px;
+    }
+
+    .yuPremiumDetails p:nth-child(4) {
+        margin-bottom: 100px;
+    }
+
+    .ytPremiumLogo {
+        margin: auto;
+        margin-top: 80px;
+        width: 100%;
+    }
+
+    .ytPremiumLogo>img {
+        width: 80%;
+        margin-left: 40px;
+    }
+
+    .features {
+        padding-left: 0;
+        padding-right: 0;
+        min-height: 100%;
+        padding-top: 400px;
+        padding-bottom: 600px;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .features div:nth-child(1)>h2,
+    .features div:nth-child(2)>h2,
+    .features div:nth-child(3)>h2 {
+        width: 50%;
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+
+    .features div:nth-child(1)>p,
+    .features div:nth-child(2)>p,
+    .features div:nth-child(3)>p {
+        margin-top: 0;
+        padding-top: 0;
+        width: 62%;
+        font-size: 1.3rem;
+        color: rgb(185, 184, 184);
+        font-weight: bold;
+    }
+
+    .features div:nth-child(1),
+    .features div:nth-child(2),
+    .features div:nth-child(3) {
+        width: 100%;
+        margin-top: 130px;
+        margin-bottom: 130px;
+    }
+
+    .bg1 {
+        background-image: url(bg1.jpeg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        justify-content: end;
+        line-height: 25px;
+        padding-left: 5%;
+        padding-bottom: 5%;
+        height: 260px;
+    }
+
+    .bg2 {
+        background-image: url(bg2.jpeg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        justify-content: end;
+        line-height: 25px;
+        padding-left: 5%;
+        padding-bottom: 5%;
+        height: 260px;
+    }
+
+    .bg3 {
+        background-image: url(bg3.jpeg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        justify-content: end;
+        line-height: 25px;
+        padding-left: 5%;
+        padding-bottom: 5%;
+        height: 260px;
+    }
+
+    .bg4 {
+        background-image: url(bg4.jpeg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        justify-content: end;
+        line-height: 25px;
+        padding-left: 5%;
+        padding-bottom: 5%;
+        height: 260px;
+    }
+}
