@@ -502,13 +502,14 @@ footer{
     margin-top: 5%;
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    width: 80%;
     padding-left: 25%;
+    align-items: center;
 }
 
 .lowerleft{
     display: flex;
-    gap: 10px;
+    gap: 30px;
 }
 
 .lowerright > select{
@@ -522,12 +523,15 @@ footer{
     gap: 30px;
 }
 
-.lowermid > img{
-    padding: 100px;
-}
-
 .image{
     display: flex;
+    border-width: 1px;
     border: solid;
     border-radius: 100px;
 }
+
+.image > img{
+    padding: 15px;
+}
+
+
