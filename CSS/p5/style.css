@@ -72,13 +72,14 @@ body {
     gap: 30px;
 }
 
-.rightNav :nth-child(4) {
+.rightNav :nth-child(5) {
     height: 25px;
     border: 1px solid black;
     border-radius: 50%;
 }
 
-.rightNav :nth-child(1) {
+.rightNav :nth-child(1),
+.rightNav :nth-child(2) {
     opacity: 0;
 }
 
@@ -352,7 +353,8 @@ hr {
         opacity: 10;
     }
 
-    .rightNav :nth-child(2) {
+    .rightNav :nth-child(2),
+    .rightNav :nth-child(3) {
         display: none;
     }
 
@@ -477,9 +479,6 @@ hr {
         opacity: 10;
     }
 
-    .rightNav :nth-child(2) {
-        display: none;
-    }
 
     .ytdesc>h2 {
         width: 100%;
@@ -506,7 +505,7 @@ hr {
     }
 
     .ytPremiumLogo>img {
-        width: 80%;
+        width: 90%;
         margin-left: 40px;
     }
 
@@ -549,45 +548,49 @@ hr {
 
     .bg1 {
         background-image: url(bg1.jpeg);
-        background-size: contain;
+        background-size: cover;
         background-repeat: no-repeat;
         justify-content: end;
         line-height: 25px;
         padding-left: 5%;
         padding-bottom: 5%;
-        height: 260px;
+        height: 300px;
     }
 
     .bg2 {
         background-image: url(bg2.jpeg);
-        background-size: contain;
+        background-size: cover;
         background-repeat: no-repeat;
         justify-content: end;
         line-height: 25px;
         padding-left: 5%;
         padding-bottom: 5%;
-        height: 260px;
+        height: 300px;
     }
 
     .bg3 {
         background-image: url(bg3.jpeg);
-        background-size: contain;
+        background-size: cover;
         background-repeat: no-repeat;
         justify-content: end;
         line-height: 25px;
         padding-left: 5%;
         padding-bottom: 5%;
-        height: 260px;
+        height: 300px;
     }
 
     .bg4 {
         background-image: url(bg4.jpeg);
-        background-size: contain;
+        background-size: cover;
         background-repeat: no-repeat;
         justify-content: end;
         line-height: 25px;
         padding-left: 5%;
         padding-bottom: 5%;
-        height: 260px;
+        height: 300px;
+    }
+
+    .rightNav :nth-child(2) {
+        opacity: 10;
     }
 }
