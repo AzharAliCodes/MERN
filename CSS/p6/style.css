@@ -494,16 +494,16 @@ footer{
 
 .line{
     padding-top: 130px;
-    padding-left: 225px;
-    width: 1000px;
+    padding-left: 25%;
+    width: 80%;
 }
 
 .lower{
     margin-top: 5%;
     display: flex;
     justify-content: space-between;
-    width: 60%;
-    margin-left: 17%;
+    width: 100%;
+    padding-left: 25%;
 }
 
 .lowerleft{
@@ -516,4 +516,18 @@ footer{
     border-radius: 30px;
     background-color: black;
     color: white;
+}
+.lowermid{
+    display: flex;
+    gap: 30px;
+}
+
+.lowermid > img{
+    padding: 100px;
+}
+
+.image{
+    display: flex;
+    border: solid;
+    border-radius: 100px;
 }
