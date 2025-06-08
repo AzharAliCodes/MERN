@@ -556,3 +556,71 @@ footer{
 .table-list > ul > li:hover{
     text-decoration: underline;  
 }
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .navbar {
+    display: none;
+  }
+
+  .navbar2 {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+  }
+
+  .navbar2 > img:nth-child(2) {
+    width: 100px;
+  }
+
+  .navbar2 > button {
+    border-radius: 50%;
+  }
+
+  .navbar2 > button > img {
+    padding: 5px;
+    background-color: #25d366;
+  }
+
+  .right > img:nth-child(4),
+  .right > img:nth-child(5),
+  .right > img:nth-child(6),
+  .right > img:nth-child(7) {
+    display: none;
+  }
+
+  .maabeti {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: end;
+    align-items: center;
+    border-radius: 25px;
+    background-position: center;
+    height: 700px;
+    padding: 10px;
+  }
+
+  .leftMsg {
+    margin-bottom: 50px;
+  }
+
+  .leftMsg > h1 {
+    margin-bottom: 15px;
+    overflow-y: hidden;
+    line-height: 50px;
+    letter-spacing: -3px;
+    font-size: 2.5em;
+    font-weight: 300;
+  }
+
+  .leftMsg > p {
+    font-size: 13px;
+    width: 70%;
+  }
+  .right {
+    margin-top: 100px;
+    margin-left: 50px;
+    width: 350px;
+    height: 120px;
+  }
+}
