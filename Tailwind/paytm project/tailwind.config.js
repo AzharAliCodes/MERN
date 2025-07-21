@@ -8,6 +8,12 @@ module.exports = {
         darkNilla: '#002970',
         ultalightNilla :'#4ccff6'
       },
+      screens : {
+            'verySmall' : {'max' : "399px"},
+            'small' : {'max' :"550px"},
+            'medium' :{'max' :"768px"},
+            'large': {'max':'1070px'},
+        }
     },
   },
   plugins: [],
