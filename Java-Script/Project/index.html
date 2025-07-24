@@ -1,23 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Password Generator</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div>
-        <p>Heelo! Welcome to our Password Generator</p>
-        <input type="text">
-        <input type="range">
-        <div>
-            <label for="cl">Capital Letter </label>
-            </label><input type="checkbox" name="cl">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-        </div>
+  <div class="container">
+    <h2>🔐 Password Generator</h2>
+
+    <p>Welcome! Customize your password below:</p>
+
+    <input type="text" id="passwordOutput" readonly>
+    <button id="copyBtn" title="Copy to Clipboard">📋 Copy</button>
+ 
+    <div class="range-section">
+      <label for="rangeSlider">Password Length:</label>
+      <input type="range" id="rangeSlider" min="4" max="32" value="12">
+      <p id="abd">12</p>
     </div>
-    <script src="index.js"></script>
+
+    <div class="checkboxes">
+      <label><input type="checkbox" id="uppercase"> Include Uppercase (A-Z)</label>
+      <label><input type="checkbox" id="lowercase"> Include Lowercase (a-z)</label>
+      <label><input type="checkbox" id="numbers"> Include Numbers (0-9)</label>
+      <label><input type="checkbox" id="symbols"> Include Symbols (!@#$...)</label>
+    </div>
+
+    <button id="generateBtn">Generate Password</button>
+  </div>
+
+  <script src="index.js"></script>
 </body>
 </html>
