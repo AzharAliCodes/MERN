@@ -1,0 +1,128 @@
+1. Data Types
+2. Primitive & Non-Primitive Types
+3. Operators
+
+---
+
+ 💡 1. What is a Data Type in JavaScript?
+
+A data type tells the kind of value a variable holds.
+
+js
+let name = "Ali"; // string
+let age = 20;     // number
+let isStudent = true; // boolean
+
+
+JavaScript has two main types:
+
+---
+
+ 🧩 2. Primitive vs Non-Primitive Data Types
+
+ ✅ Primitive Data Types
+
+These are basic, single values, and immutable (cannot be changed directly).
+
+| Type      | Example                          |
+| --------- | -------------------------------- |
+| Number    | let age = 20;                  |
+| String    | let name = "Ali";              |
+| Boolean   | let isCool = true;             |
+| Null      | let data = null;               |
+| Undefined | let x;                         |
+| Symbol    | let id = Symbol("id");         |
+| BigInt    | let big = 123456789123456789n; |
+
+👉 Note: typeof null gives "object" (this is a known JavaScript bug).
+
+---
+
+ ✅ Non-Primitive Data Types
+
+These hold collections or complex structures. They are mutable (can be changed).
+
+| Type     | Example                             |
+| -------- | ----------------------------------- |
+| Object   | let person = {name: "Ali"};       |
+| Array    | let fruits = ["apple", "banana"]; |
+| Function | function sayHi() { alert("Hi"); } |
+
+---
+
+ ⚙️ 3. JavaScript Operators
+
+Operators are symbols used to perform actions on values.
+
+---
+
+ ➕ A. Arithmetic Operators
+
+Used for math.
+
+| Operator | Meaning   | Example        |
+| -------- | --------- | -------------- |
+| +      | Add       | 5 + 2 → 7  |
+| -      | Subtract  | 5 - 2 → 3  |
+|       | Multiply  | 5  2 → 10 |
+| /      | Divide    | 10 / 2 → 5 |
+| %      | Remainder | 5 % 2 → 1  |
+|      | Power     | 2  3 → 8 |
+
+---
+
+ ⚖️ B. Comparison Operators
+
+Used to compare two values. Returns true or false.
+
+| Operator | Meaning          | Example         |
+| -------- | ---------------- | --------------- |
+| ==     | Equal (loose)    | 5 == "5" → ✅  |
+| ===    | Equal (strict)   | 5 === "5" → ❌ |
+| !=     | Not equal        | 5 != 4 → ✅    |
+| !==    | Strict not equal | 5 !== "5" → ✅ |
+| >      | Greater than     | 5 > 3 → ✅     |
+| <      | Less than        | 3 < 5 → ✅     |
+| >=     | Greater or equal | 5 >= 5 → ✅    |
+| <=     | Less or equal    | 5 <= 6 → ✅    |
+
+---
+
+ 🔄 C. Assignment Operators
+
+Used to assign values.
+
+| Operator | Example          | Meaning              |
+| -------- | ---------------- | -------------------- |
+| =      | x = 5          | assign 5 to x        |
+| +=     | x += 2 → x+2 | add and assign       |
+| -=     | x -= 1         | subtract and assign  |
+| =     | x = 3         | multiply and assign  |
+| /=     | x /= 2         | divide and assign    |
+| %=     | x %= 2         | remainder and assign |
+
+---
+
+ ✅ D. Unary Operators
+
+Works on one value.
+
+| Operator | Meaning    | Example                     |
+| -------- | ---------- | --------------------------- |
+| ++     | Increment  | x++ → x+1               |
+| --     | Decrement  | x-- → x-1               |
+| typeof | Type check | typeof "Ali" → "string" |
+
+---
+
+ 🔁 E. Logical Operators
+
+Used for multiple conditions (true/false checks).
+
+| Operator | Meaning         | Example                 |                   |        |   |                |
+| -------- | --------------- | ----------------------- | ----------------- | ------ | - | -------------- |
+| &&     | AND (both true) | true && true → true |                   |        |   |                |
+| \       |                 | \                      | OR (any one true) | \true |   | false→true\ |
+| !      | NOT (opposite)  | !true → false       |                   |        |   |                |
+
+---

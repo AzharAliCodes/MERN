@@ -1,0 +1,164 @@
+ Event Propagation
+ Event Bubbling
+ Event Capturing
+ Draggable Elements
+
+---
+
+ 🔄 What is Event Propagation?
+
+When an event happens (like a click), it doesn’t just affect one element — it can move through the DOM tree in a specific way.
+
+There are two main phases:
+
+1. Event Capturing (goes from outer to inner)
+2. Event Bubbling (goes from inner to outer)
+
+So, event propagation means how events travel from one element to another — up and down the DOM tree.
+
+---
+
+ 🔵 1. Event Bubbling (Default in JavaScript)
+
+ The event starts from the clicked/target element, and then bubbles up to its parents and so on.
+
+ 📌 Example:
+
+html
+<div id="outer">
+  <button id="inner">Click Me</button>
+</div>
+
+
+js
+document.getElementById("outer").addEventListener("click", () => {
+  console.log("Outer clicked!");
+});
+
+document.getElementById("inner").addEventListener("click", () => {
+  console.log("Inner clicked!");
+});
+
+
+ 🔎 Output (when you click the button):
+
+
+Inner clicked!
+Outer clicked!
+
+
+✅ Why? Because bubbling starts from the inner element and moves up.
+
+---
+
+ 🔴 2. Event Capturing (Less used)
+
+ The event goes from top (document) down to the target before it fires.
+
+To use capturing, set the 3rd parameter of addEventListener to true:
+
+js
+document.getElementById("outer").addEventListener("click", () => {
+  console.log("Outer capturing");
+}, true);
+
+
+🟡 If both capturing and bubbling are set, capturing runs first, then bubbling.
+
+---
+
+ ⚠️ Summary: Bubbling vs Capturing
+
+| Feature          | Bubbling            | Capturing                         |
+| ---------------- | ------------------- | --------------------------------- |
+| Order            | From inner to outer | From outer to inner               |
+| Default behavior | ✅ Yes               | ❌ No (need to enable it)          |
+| Usage            | Most common         | Rarely used                       |
+| Enable how?      | Default             | Pass true in addEventListener |
+
+---
+
+ ❌ Stop Propagation
+
+You can stop event from continuing using:
+
+js
+event.stopPropagation();
+
+
+ 🧪 Example:
+
+js
+inner.addEventListener("click", function(e) {
+  e.stopPropagation();
+  console.log("Inner only");
+});
+
+
+---
+
+ 🧲 What is Draggable in HTML?
+
+Draggable means you can drag an HTML element using the mouse.
+
+ ✅ How to make an element draggable:
+
+Set the draggable="true" attribute in HTML:
+
+html
+<div id="dragMe" draggable="true">Drag Me!</div>
+
+
+---
+
+ 🛠️ Events used for dragging:
+
+| Event       | When it happens                    |
+| ----------- | ---------------------------------- |
+| dragstart | When you start dragging            |
+| drag      | While dragging                     |
+| dragend   | When you drop/release the mouse    |
+| dragover  | When you're dragging over a target |
+| drop      | When you drop the dragged item     |
+
+---
+
+ 🧪 Example:
+
+html
+<div id="dragMe" draggable="true">Drag Me!</div>
+<div id="dropHere" style="width:200px;height:100px;border:2px dashed black;"></div>
+
+<script>
+  let dragItem = document.getElementById("dragMe");
+  let dropZone = document.getElementById("dropHere");
+
+  dragItem.addEventListener("dragstart", function (e) {
+    e.dataTransfer.setData("text", "Dragged Element");
+    console.log("Started dragging");
+  });
+
+  dropZone.addEventListener("dragover", function (e) {
+    e.preventDefault(); // important!
+  });
+
+  dropZone.addEventListener("drop", function (e) {
+    e.preventDefault();
+    console.log("Item dropped here");
+    dropZone.innerHTML = "Dropped!";
+  });
+</script>
+
+
+---
+
+ 🔚 Summary Table
+
+| Concept             | Simple Meaning                                |
+| ------------------- | --------------------------------------------- |
+| Bubbling        | Event goes from inner to outer            |
+| Capturing       | Event goes from outer to inner            |
+| stopPropagation | Stops event from going further                |
+| Draggable       | Makes element movable using mouse             |
+| drop/dragover   | Used to define where to drop dragged elements |
+

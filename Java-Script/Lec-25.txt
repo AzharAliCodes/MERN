@@ -1,0 +1,143 @@
+💡 1. What is JavaScript (JS)?
+
+JavaScript is a programming language used to make websites interactive.
+
+✅ It runs in the browser.
+✅ It controls things like buttons, forms, popups, sliders, etc.
+✅ It can also be used on servers (with Node.js).
+
+🧠 Example Use:
+
+ Click a button → Show a message
+ Type in form → Check if input is valid
+ Change color or style when mouse hovers
+
+---
+
+ 💡 2. What is High-Level and Low-Level Programming Language?
+
+ 🔹 High-Level Language:
+
+ Easy to read and write
+ Close to human language
+ Examples: JavaScript, Python, Java
+
+js
+let name = "Ali"; // High-level code
+
+
+ 🔹 Low-Level Language:
+
+ Closer to machine language
+ Hard to read, but faster
+ Examples: Assembly, Machine Code (Binary)
+
+🧠 Think of it like this:
+High-level is like talking in English.
+Low-level is like talking in 0s and 1s.
+
+---
+
+ 💡 3. What is Compiler and Interpreter?
+
+ 🔹 Compiler:
+
+ Translates the whole code at once into machine code.
+ Fast after compiling.
+ Example: C, C++
+
+ 🔹 Interpreter:
+
+ Translates code line-by-line.
+ Slower but easier to debug.
+ Example: JavaScript, Python
+
+🧠 JavaScript is an interpreted language.
+
+---
+
+ 💡 4. What is Single-Threaded and Multi-Threaded?
+
+ 🔹 Single-threaded:
+
+ One task runs at a time.
+ JavaScript is single-threaded.
+
+js
+console.log("Task 1");
+console.log("Task 2"); // Runs after Task 1
+
+
+ 🔹 Multi-threaded:
+
+ Many tasks run at the same time (parallel).
+ Used in languages like Java, C++, or in background tasks.
+
+🧠 Example: A cook (thread) can only make one dish at a time (single). If there are 3 cooks, they can make 3 dishes (multi-threaded).
+
+---
+
+ 💡 5. How to Print in JavaScript?
+
+Use console.log() to print anything in JavaScript.
+
+js
+console.log("Hello Ali");
+console.log(5 + 3);
+
+
+✅ Output goes to the browser console (Right-click → Inspect → Console tab).
+
+---
+
+ 💡 6. What is a Variable in JavaScript?
+
+A variable is like a box that stores data.
+
+js
+let name = "Ali";
+let age = 20;
+
+
+Here:
+
+ name is a variable that stores "Ali"
+ age is a variable that stores 20
+
+---
+
+ 💡 7. Types of Variables in JS
+
+There are three ways to declare a variable:
+
+| Keyword | Can Reassign? | Block Scope? | Hoisted? |
+| ------- | ------------- | ------------ | -------- |
+| var   | ✅ Yes         | ❌ No         | ✅ Yes    |
+| let   | ✅ Yes         | ✅ Yes        | ❌ No     |
+| const | ❌ No          | ✅ Yes        | ❌ No     |
+
+js
+var x = 5;    // Old way
+let y = 10;   // Modern way (recommended)
+const z = 15; // Constant value
+
+
+---
+
+ 💡 8. Rules to Declare a Variable
+
+✅ Rules:
+
+1. Name must start with a letter, _, or $
+2. Cannot start with a number
+3. Cannot use JS keywords like let, function, etc.
+4. Case-sensitive (Name and name are different)
+5. Use meaningful names
+
+js
+let name = "Ali";      // ✅ Good
+let _score = 100;      // ✅ OK
+let $total = 50;       // ✅ OK
+let 1value = 10;       // ❌ Error
+let let = 5;           // ❌ Error
+

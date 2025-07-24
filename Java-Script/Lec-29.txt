@@ -1,0 +1,217 @@
+🔹 Common Array Methods:
+
+| Method                              | Use                                     | Example                            |
+| ----------------------------------- | --------------------------------------- | ---------------------------------- |
+| push()                            | Add element at the end                  | arr.push(4)                      |
+| pop()                             | Remove last element                     | arr.pop()                        |
+| shift()                           | Remove first element                    | arr.shift()                      |
+| unshift()                         | Add element at start                    | arr.unshift(1)                   |
+| splice(start, deleteCount, items) | Add/remove at any position              | arr.splice(1, 1, 'new')          |
+| slice(start, end)                 | Returns part of array                   | arr.slice(1, 3)                  |
+| indexOf()                         | Find index of element                   | arr.indexOf('a')                 |
+| includes()                        | Check if element exists                 | arr.includes('a')                |
+| join()                            | Combine into string                     | arr.join('-')                    |
+| reverse()                         | Reverses array                          | arr.reverse()                    |
+| sort()                            | Sorts array (string sort by default)    | arr.sort()                       |
+| map()                             | Return new array by applying a function | arr.map(x => x  2)              |
+| filter()                          | Filter elements                         | arr.filter(x => x > 5)           |
+| forEach()                         | Loop through elements                   | arr.forEach(x => console.log(x)) |
+| reduce()                          | Combine into a single value             | arr.reduce((acc, x) => acc + x)  |
+
+---
+
+ 🔹 Array Destructuring
+
+It’s a shortcut to assign array elements to variables.
+
+js
+const numbers = [10, 20, 30];
+
+// Without destructuring:
+const a = numbers[0];
+const b = numbers[1];
+
+// With destructuring:
+const [x, y, z] = numbers;
+console.log(x); // 10
+console.log(y); // 20
+
+
+You can also skip elements:
+
+js
+const [first, , third] = [1, 2, 3];
+console.log(third); // 3
+
+
+---
+
+ ✅ Object Methods & Functions (Detailed)
+
+ 🔹 Useful Object Methods:
+
+| Method                | Use                     | Example                            |
+| --------------------- | ----------------------- | ---------------------------------- |
+| Object.keys(obj)    | Get all keys            | ['name', 'age']                  |
+| Object.values(obj)  | Get all values          | ['Ali', 22]                      |
+| Object.entries(obj) | Get \[key, value] pairs | [ ['name', 'Ali'], ['age', 22] ] |
+| Object.assign()     | Copy properties         | Object.assign({}, obj)           |
+| hasOwnProperty()    | Check if key exists     | obj.hasOwnProperty('name')       |
+
+ 🔹 Object Functions:
+
+Objects can also have methods (functions inside objects):
+
+js
+const person = {
+  name: "Ali",
+  greet: function () {
+    console.log(Hello, my name is ${this.name});
+  }
+};
+
+person.greet(); // Hello, my name is Ali
+
+
+---
+
+ 🔹 Object Destructuring
+
+Pull values from objects directly into variables:
+
+js
+const user = { name: "Ali", age: 22 };
+
+// Without destructuring:
+const name1 = user.name;
+
+// With destructuring:
+const { name, age } = user;
+console.log(name); // Ali
+console.log(age); // 22
+
+
+You can also rename:
+
+js
+const { name: userName } = user;
+console.log(userName); // Ali
+
+
+---
+
+ ✅ for...in vs for...of Loops
+
+ 🔸 for...in → Loop through keys (index or property names)
+
+js
+const obj = { name: "Ali", age: 22 };
+for (let key in obj) {
+  console.log(key); // name, age
+  console.log(obj[key]); // Ali, 22
+}
+
+
+ 🔸 for...of → Loop through values (use with arrays, strings, etc.)
+
+js
+const arr = ['a', 'b', 'c'];
+for (let item of arr) {
+  console.log(item); // a, b, c
+}
+
+
+❗ for...of doesn’t work directly on objects unless you use Object.entries() or similar.
+
+---
+
+ ✅ Rest & Spread Operators
+
+ 🔹 Spread (...) → Spread values from array or object
+
+js
+const arr1 = [1, 2];
+const arr2 = [...arr1, 3, 4];
+console.log(arr2); // [1, 2, 3, 4]
+
+
+js
+const obj1 = { name: "Ali" };
+const obj2 = { ...obj1, age: 22 };
+console.log(obj2); // { name: "Ali", age: 22 }
+
+
+---
+
+ 🔹 Rest (...) → Collect remaining values
+
+js
+const [a, b, ...rest] = [1, 2, 3, 4, 5];
+console.log(rest); // [3, 4, 5]
+
+
+js
+function showDetails(name, ...skills) {
+  console.log(name); // Ali
+  console.log(skills); // ['JavaScript', 'Python']
+}
+showDetails('Ali', 'JavaScript', 'Python');
+
+
+
+ 💡 What is this symbol \` (backtick) used for in JavaScript?
+
+This is used in Template Literals (also called Template Strings).
+This is a modern way (ES6+) to write strings in JavaScript.
+
+---
+
+ ✅ What is the Topic Called?
+
+📘 Topic Name: Template Literals (or Template Strings)
+
+---
+
+ 🔹 Uses of Template Literals
+
+ 1. ✅ Multi-line Strings
+
+With backticks, you can write multi-line strings easily.
+
+js
+let message = `Hello Ali,
+Welcome to JavaScript learning.
+Keep growing!`;
+
+console.log(message);
+
+
+No need to use `\n` or string + string + string.
+
+---
+
+ 2. ✅ String Interpolation using `${}`
+
+You can insert variables directly inside strings using `${}`.
+
+js
+let name = "Ali";
+let age = 20;
+
+let intro = `My name is ${name} and I am ${age} years old.`;
+console.log(intro); // Output: My name is Ali and I am 20 years old.
+
+
+This is cleaner than:
+
+js
+// old way
+let intro = "My name is " + name + " and I am " + age + " years old.";
+
+
+---
+
+ 🧠 Syntax Reminder:
+
+js
+let result = `some text and ${expression}`;

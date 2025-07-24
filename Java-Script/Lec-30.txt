@@ -1,0 +1,223 @@
+ 🔁 1. forEach() Function
+
+ ✅ Your Version:
+
+> What is forEach function?
+> Explain with example.
+
+ ✅ Enhanced Version:
+
+> forEach is used to loop through each item in an array and run a function on each one.
+> It does not return anything (no new array), it just performs an action for every element.
+
+ ✅ Example (Your Way Enhanced):
+
+js
+let numbers = [1, 2, 3, 4];
+
+numbers.forEach(function(num) {
+  console.log(num  2); // Just prints, doesn’t return anything
+});
+
+
+ ✅ Example (Arrow Function):
+
+js
+numbers.forEach(num => console.log(num  2));
+
+
+---
+
+ 💬 2. Callback Function
+
+ ✅ Your Version:
+
+> What is callback function?
+> Explain with example.
+
+ ✅ Enhanced Version:
+
+A callback function is a function that is passed as an argument to another function.
+It is called "back" later by that function when needed.
+
+ ✅ Example:
+
+js
+function greetUser(name, callback) {
+  console.log("Hi " + name);
+  callback();
+}
+
+function done() {
+  console.log("Welcome to our platform!");
+}
+
+greetUser("Ali", done);
+
+
+🧠 Here:
+
+ done is a callback function.
+ It's passed to greetUser() and called inside it.
+
+You’ve already used callback in .forEach(), .map(), etc.
+
+---
+
+ 🏹 3. Arrow Functions
+
+ ✅ Your Version:
+
+> Arrow function with syntax and example
+
+ ✅ Enhanced Version:
+
+An arrow function is a shorter way to write functions in JS.
+It uses the => symbol.
+
+ ✅ Syntax:
+
+js
+const functionName = (parameters) => {
+  // code
+};
+
+
+ ✅ Example:
+
+js
+const add = (a, b) => a + b;
+
+console.log(add(5, 3)); // Output: 8
+
+
+ ✅ Simple One-line Arrow Function:
+
+js
+const square = x => x  x;
+console.log(square(4)); // 16
+
+
+---
+
+ 🧭 4. map() Function
+
+ ✅ Your Version:
+
+> map is taking value and performing operation on that and lastly giving new array with modified data.
+
+ ✅ Enhanced Version:
+
+✅ Yes, correct Ali!
+map() is used to transform each element of an array and return a new array with modified values.
+
+ ✅ Your Example:
+
+js
+let numbers = [1, 2, 3];
+let newNumbers = numbers.map(num => num  2);
+console.log(newNumbers); // [2, 4, 6]
+
+
+🧠 Original array remains unchanged.
+
+---
+
+ 🔍 5. filter() Function
+
+ ✅ Your Version:
+
+> filter is used same as map() function — here we are using condition to find particular things.
+
+ ✅ Enhanced Version:
+
+Yes, you're right!
+filter() is used to keep only those elements that match a condition.
+It returns a new array with filtered items.
+
+ ✅ Example:
+
+js
+let numbers = [10, 20, 30, 40, 50];
+
+let greaterThan30 = numbers.filter(num => num > 30);
+
+console.log(greaterThan30); // [40, 50]
+
+
+🧠 Think: filter() = "give me only the matching items".
+
+---
+
+ 🔽 6. reduce() Function
+
+ ✅ Enhanced Version:
+
+reduce() is used to combine all elements of an array into a single value (sum, product, object, etc.).
+
+ ✅ Syntax:
+
+js
+array.reduce((accumulator, currentValue) => {
+  // combine logic
+}, initialValue);
+
+
+| Term           | Meaning                         |
+| -------------- | ------------------------------- |
+| accumulator  | Total result so far             |
+| currentValue | Current item in array           |
+| initialValue | Starting value (usually 0 or 1) |
+
+---
+
+ ✅ Example 1: Sum of all numbers
+
+js
+let numbers = [1, 2, 3, 4];
+
+let total = numbers.reduce((sum, num) => sum + num, 0);
+
+console.log(total); // Output: 10
+
+
+---
+
+ ✅ Example 2: Find max number
+
+js
+let numbers = [5, 8, 3, 12, 7];
+
+let max = numbers.reduce((a, b) => a > b ? a : b);
+console.log(max); // 12
+
+
+---
+
+ ✅ Example 3: Convert array to object
+
+js
+let fruits = ["apple", "banana", "apple", "orange", "banana"];
+
+let count = fruits.reduce((acc, fruit) => {
+  acc[fruit] = (acc[fruit] || 0) + 1;
+  return acc;
+}, {});
+
+console.log(count);
+// Output: { apple: 2, banana: 2, orange: 1 }
+
+
+---
+
+ ✅ Final Summary
+
+| Function    | Returns New Array? | Used For                                     |
+| ----------- | ------------------ | -------------------------------------------- |
+| forEach() | ❌ No               | Just loops over array, no return             |
+| map()     | ✅ Yes              | Modify each item, return new array           |
+| filter()  | ✅ Yes              | Keep only items that match condition         |
+| reduce()  | ❌ (Single Value)   | Combine all into one result (sum, max, etc.) |
+| Arrow Func  | —                  | Short syntax for writing functions           |
+| Callback    | —                  | Pass a function as argument to another       |
+

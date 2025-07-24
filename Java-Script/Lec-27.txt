@@ -1,0 +1,164 @@
+ 🔁 CONTROL FLOW in JavaScript
+
+It includes:
+
+1. if, else if, else
+2. switch
+3. Loops (for, while, do while)
+4. Ternary operator (? :)
+
+---
+
+ 💡 1. if, else if, else
+
+Used to make decisions based on conditions.
+
+ ✅ Syntax:
+
+js
+if (condition) {
+  // code runs if condition is true
+} else if (anotherCondition) {
+  // code runs if another condition is true
+} else {
+  // code runs if no conditions are true
+}
+
+
+ ✅ Example:
+
+js
+let marks = 85;
+
+if (marks >= 90) {
+  console.log("Grade A");
+} else if (marks >= 75) {
+  console.log("Grade B");
+} else {
+  console.log("Try harder!");
+}
+// Output: Grade B
+
+
+---
+
+ 💡 2. switch Case
+
+Used to check many conditions instead of writing multiple if...else.
+
+ ✅ Syntax:
+
+js
+switch (value) {
+  case value1:
+    // code if value === value1
+    break;
+  case value2:
+    // code if value === value2
+    break;
+  default:
+    // code if no case matches
+}
+
+
+ ✅ Example:
+
+js
+let day = "Monday";
+
+switch (day) {
+  case "Sunday":
+    console.log("Relax!");
+    break;
+  case "Monday":
+    console.log("Start working!");
+    break;
+  case "Friday":
+    console.log("Almost weekend!");
+    break;
+  default:
+    console.log("Just another day");
+}
+// Output: Start working!
+
+
+📝 Note: break stops the code from checking next cases.
+
+---
+
+ 💡 3. Loops
+
+Used to repeat code.
+
+---
+
+ 🔄 a) for loop
+
+Runs the code a fixed number of times.
+
+js
+for (let i = 1; i <= 5; i++) {
+  console.log("Hello " + i);
+}
+// Output: Hello 1 to Hello 5
+
+
+---
+
+ 🔁 b) while loop
+
+Runs while the condition is true.
+
+js
+let i = 1;
+while (i <= 3) {
+  console.log("Count " + i);
+  i++;
+}
+// Output: Count 1 to Count 3
+
+
+---
+
+ 🔁 c) do...while loop
+
+Runs the code at least once, then checks condition.
+
+js
+let i = 1;
+do {
+  console.log("Try " + i);
+  i++;
+} while (i <= 2);
+// Output: Try 1, Try 2
+
+
+---
+
+ 💡 4. Ternary Operator
+
+It is a short form of if-else.
+
+ ✅ Syntax:
+
+js
+condition ? valueIfTrue : valueIfFalse;
+
+
+ ✅ Example:
+
+js
+let age = 20;
+let result = age >= 18 ? "Adult" : "Minor";
+console.log(result); // Output: Adult
+
+
+🧠 Same as:
+
+js
+if (age >= 18) {
+  result = "Adult";
+} else {
+  result = "Minor";
+}
+

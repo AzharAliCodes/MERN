@@ -1,0 +1,108 @@
+ 💡 1. What is a Function in JavaScript?
+
+A function is a block of code that does a specific task. You can reuse it any time by calling it.
+
+ ✅ Function Syntax:
+
+js
+function functionName(parameters) {
+  // code to run
+}
+
+
+ ✅ Example:
+
+js
+function greet(name) {
+  console.log("Hello, " + name + "!");
+}
+
+greet("Ali"); // Output: Hello, Ali!
+
+
+---
+
+ 💡 2. Types of Functions
+
+| Type                 | Example                                |
+| -------------------- | -------------------------------------- |
+| Normal Function      | function greet() {}                  |
+| Function with Params | function add(a, b) { return a + b; } |
+| Arrow Function       | const add = (a, b) => a + b;         |
+| Anonymous Function   | const hello = function() {}          |
+
+---
+
+ 🔢 3. Number Methods in JavaScript
+
+JavaScript has built-in methods to work with numbers.
+
+js
+let num = 25.678;
+
+
+| Method         | Use                       | Example                           |
+| -------------- | ------------------------- | --------------------------------- |
+| toFixed()    | Fix decimal places        | num.toFixed(2) → "25.68"      |
+| toString()   | Convert number to string  | num.toString() → "25.678"     |
+| parseInt()   | Convert string to integer | parseInt("123.45") → 123      |
+| parseFloat() | Convert string to float   | parseFloat("123.45") → 123.45 |
+| isNaN()      | Check if value is NaN     | isNaN("abc") → true           |
+
+---
+
+ 🔤 4. String Methods in JavaScript
+
+js
+let text = "JavaScript is Fun!";
+
+
+| Method             | Use                            | Example                             |
+| ------------------ | ------------------------------ | ----------------------------------- |
+| length           | Get string length              | text.length → 18                |
+| toUpperCase()    | Convert to UPPERCASE           | text.toUpperCase()                |
+| toLowerCase()    | Convert to lowercase           | text.toLowerCase()                |
+| includes()       | Check if string contains value | text.includes("Fun") → true     |
+| indexOf()        | Find position of word/letter   | text.indexOf("Script") → 4      |
+| slice(start,end) | Cut part of string             | text.slice(0,10) → "JavaScript" |
+| replace()        | Replace text                   | text.replace("Fun", "Powerful")   |
+| trim()           | Remove extra spaces            | "  hi  ".trim() → "hi"          |
+
+---
+
+ 📅 5. Date Methods in JavaScript
+
+js
+let now = new Date();
+
+
+| Method           | Use                     | Example              |
+| ---------------- | ----------------------- | -------------------- |
+| new Date()     | Current date/time       | new Date()         |
+| getFullYear()  | Get year                | now.getFullYear()  |
+| getMonth()     | Get month (0-11)        | now.getMonth()     |
+| getDate()      | Day of the month (1-31) | now.getDate()      |
+| getDay()       | Day of week (0=Sunday)  | now.getDay()       |
+| getHours()     | Get hour                | now.getHours()     |
+| toDateString() | Full readable date      | now.toDateString() |
+
+---
+
+ 🧮 6. Math Methods in JavaScript
+
+js
+let x = 4.7;
+
+
+| Method          | Use                      | Example                   |
+| --------------- | ------------------------ | ------------------------- |
+| Math.round()  | Round to nearest integer | Math.round(4.7) → 5   |
+| Math.floor()  | Round down               | Math.floor(4.7) → 4   |
+| Math.ceil()   | Round up                 | Math.ceil(4.1) → 5    |
+| Math.random() | Random number (0 to 1)   | Math.random()           |
+| Math.max()    | Largest of values        | Math.max(2,5,10) → 10 |
+| Math.min()    | Smallest of values       | Math.min(2,5,10) → 2  |
+| Math.sqrt()   | Square root              | Math.sqrt(16) → 4     |
+| Math.pow()    | Power                    | Math.pow(2, 3) → 8    |
+| Math.abs()    | Absolute value           | Math.abs(-5) → 5      |
+

@@ -1,0 +1,206 @@
+ 🔶 What is an Event in JavaScript?
+
+An event is something that happens in the browser — like a user clicking a button, moving the mouse, typing in an input, submitting a form, etc.
+
+---
+
+ ✅ Commonly Used Events
+
+| Event Name  | When it Happens                |
+| ----------- | ------------------------------ |
+| click     | When an element is clicked     |
+| mouseover | When mouse hovers on element   |
+| mouseout  | When mouse leaves element      |
+| keyup     | When a key is released         |
+| keydown   | When a key is pressed          |
+| submit    | When a form is submitted       |
+| change    | When value of input changes    |
+| input     | When user types in input field |
+
+---
+
+ 🔷 How to Use Events in HTML
+
+You can directly write the event inside the HTML tag:
+
+html
+<button onclick="showMessage()">Click Me</button>
+
+<script>
+  function showMessage() {
+    alert("Button clicked!");
+  }
+</script>
+
+
+---
+
+ 🔷 How to Use Events in JavaScript
+
+ ✅ 1. Using Function + onclick Property:
+
+html
+<button id="btn">Click Me</button>
+
+<script>
+  document.getElementById("btn").onclick = function () {
+    alert("You clicked the button!");
+  };
+</script>
+
+
+---
+
+ ✅ 2. Using addEventListener() (Recommended way)
+
+ ✅ Syntax:
+
+js
+element.addEventListener("eventName", functionName);
+
+
+ 🧪 Example:
+
+html
+<button id="myBtn">Click Here</button>
+
+<script>
+  document.getElementById("myBtn").addEventListener("click", function () {
+    alert("Hello from Event Listener!");
+  });
+</script>
+
+
+---
+
+ 🔄 addEventListener() vs onclick
+
+| Feature              | onclick              | addEventListener()          |
+| -------------------- | ---------------------- | ----------------------------- |
+| Adds multiple events | ❌ No, only one allowed | ✅ Yes, can add many listeners |
+| Replaces old handler | ✅ Yes                  | ❌ No, all handlers will work  |
+| Modern use           | Less preferred         | ✅ Recommended way             |
+
+---
+
+ 🎯 What is Event Listener and Event Handler?
+
+| Term               | Meaning                                                               |
+| ------------------ | --------------------------------------------------------------------- |
+| Event Listener | The method that listens for an event (like .addEventListener()) |
+| Event Handler  | The function that runs when the event happens                     |
+
+ 🧪 Example:
+
+js
+document.getElementById("box").addEventListener("click", myHandler);
+
+function myHandler() {
+  alert("Box clicked!");
+}
+
+
+---
+
+ 🧾 What is the Event Object?
+
+When an event happens, the browser sends extra info in an object called the event object.
+This object contains details like:
+
+ which element was clicked (target)
+ mouse position
+ key pressed
+ default action
+
+ 🧪 Example:
+
+js
+document.getElementById("box").addEventListener("click", function(event) {
+  console.log(event); // prints event object
+  console.log(event.target); // prints the element clicked
+});
+
+
+---
+
+ 🪟 Browser Pop-ups
+
+ ✅ 1. alert()
+
+ Shows a message box
+
+js
+alert("Hello User!");
+
+
+ ✅ 2. confirm()
+
+ Shows a message with OK/Cancel
+
+js
+let result = confirm("Are you sure?");
+console.log(result); // true or false
+
+
+ ✅ 3. prompt()
+
+ Asks the user to enter something
+
+js
+let name = prompt("What is your name?");
+console.log(name);
+
+
+---
+
+ 🧠 Input Events & Properties
+
+ ✅ value
+
+Gets the value entered in an input field.
+
+html
+<input id="nameInput" type="text">
+
+<script>
+  let input = document.getElementById("nameInput");
+  console.log(input.value); // prints current value
+</script>
+
+
+---
+
+ ✅ checked
+
+Used for checkbox/radio buttons to know if it’s selected.
+
+html
+<input type="checkbox" id="agree">
+
+<script>
+  let checkbox = document.getElementById("agree");
+  console.log(checkbox.checked); // true or false
+</script>
+
+
+---
+
+ ✅ Input Key Events: keydown, keyup, keypress
+
+| Event      | When it happens                            |
+| ---------- | ------------------------------------------ |
+| keydown  | When a key is pressed down             |
+| keyup    | When a key is released                 |
+| keypress | (Deprecated) Only for printable characters |
+
+ 🧪 Example:
+
+html
+<input type="text" id="inputBox">
+
+<script>
+  document.getElementById("inputBox").addEventListener("keyup", function(event) {
+    console.log("You pressed:", event.key); // shows which key was pressed
+  });
+</script>
+

@@ -1,0 +1,327 @@
+🔷 JavaScript Type Conversion (Type Coercion)
+
+ 1. toPrimitive
+
+ Converts a complex object (like an object or array) to a primitive (string, number, or boolean).
+ It uses valueOf() and toString() internally.
+
+ 🧪 Example:
+
+js
+let obj = {
+  valueOf() {
+    return 42;
+  },
+  toString() {
+    return "hello";
+  }
+};
+
+console.log(+obj); // 42 (uses valueOf first for number)
+console.log(String(obj)); // "hello" (uses toString for string)
+
+
+---
+
+ 2. toBoolean
+
+ Converts a value to true or false.
+ In JavaScript, some values are falsy, and all others are truthy.
+
+ 🔻Falsy values:
+
+ false, 0, "" (empty string), null, undefined, NaN
+
+ 🧪 Example:
+
+js
+console.log(Boolean(0));        // false
+console.log(Boolean("hello"));  // true
+console.log(Boolean(null));     // false
+
+
+---
+
+ 3. toString
+
+ Converts any value to a string using String() or .toString().
+
+ 🧪 Example:
+
+js
+console.log(String(123));       // "123"
+console.log((123).toString());  // "123"
+
+
+---
+
+ 4. toNumber
+
+ Converts a value to number using Number()
+
+ 🧪 Example:
+
+js
+console.log(Number("123"));   // 123
+console.log(Number(true));    // 1
+console.log(Number(false));   // 0
+console.log(Number("abc"));   // NaN
+
+
+---
+
+ 🧭 DOM (Document Object Model)
+
+The DOM represents the HTML structure as a tree of objects in JavaScript. You can use DOM methods to access and change HTML elements.
+
+---
+
+ 🛠️ DOM Properties & Methods
+
+| Type           | Common Examples                                                   |
+| -------------- | ----------------------------------------------------------------- |
+| Properties | innerHTML, innerText, textContent, value, src, href   |
+| Methods    | getElementById(), getElementsByClassName(), querySelector() |
+
+---
+
+ 🌳 DOM Element Selectors
+
+ 1. getElementById()
+
+ Selects one element using its id.
+
+js
+let title = document.getElementById("main-title");
+console.log(title);
+
+
+---
+
+ 2. getElementsByClassName()
+
+ Selects all elements with a class name (returns HTMLCollection).
+
+js
+let boxes = document.getElementsByClassName("box");
+console.log(boxes[0]); // Access the first box
+
+
+---
+
+ 3. getElementsByTagName()
+
+ Selects all elements with a given tag (e.g., div, p).
+
+js
+let paragraphs = document.getElementsByTagName("p");
+console.log(paragraphs.length);
+
+
+---
+
+ 🔍 querySelector & querySelectorAll
+
+ querySelector()
+
+ Returns the first matching element (like CSS selector).
+
+js
+let firstButton = document.querySelector("button");
+let item = document.querySelector(".item");  // class
+let section = document.querySelector("main"); // id
+
+
+ querySelectorAll()
+
+ Returns all matching elements as a NodeList.
+
+js
+let allButtons = document.querySelectorAll("button");
+allButtons.forEach(btn => console.log(btn.textContent));
+
+
+---
+
+ ✅ Difference: querySelector vs querySelectorAll
+
+| Feature     | querySelector         | querySelectorAll         |
+| ----------- | ----------------------- | -------------------------- |
+| Returns     | First match only        | All matches                |
+| Output Type | Single Element          | NodeList (can use forEach) |
+| Example     | querySelector(".btn") | querySelectorAll(".btn") |
+
+---
+
+ 🧾 Content vs HTML Properties
+
+ 1. innerHTML
+
+ Gets or sets HTML content inside an element.
+
+js
+element.innerHTML = "<b>Hello</b>"; // bold text added
+
+
+ 2. innerText
+
+ Gets or sets the visible text (renders styles like CSS display: none).
+
+js
+element.innerText = "Hello World";
+
+
+ 3. textContent
+
+ Gets or sets all text content, even hidden ones (ignores CSS).
+
+js
+element.textContent = "Hello World";
+
+
+---
+
+ ✅ Difference: textContent vs innerText
+
+| Feature            | textContent               | innerText                  |
+| ------------------ | --------------------------- | ---------------------------- |
+| Shows hidden text? | ✅ Yes                       | ❌ No (ignores hidden text)   |
+| Performance        | Faster                      | Slower (recalculates styles) |
+| Use case           | Read all text (even hidden) | Get only visible text        |
+
+---
+
+ 🔷 HTMLCollection vs NodeList
+
+Both are array-like collections used in the DOM to store multiple elements. But they are not real arrays.
+
+ ✅ What is HTMLCollection?
+
+ Returned by methods like:
+
+   getElementsByClassName()
+   getElementsByTagName()
+ Live collection: Updates automatically if DOM changes.
+
+js
+let divs = document.getElementsByTagName("div");
+console.log(divs.length); // will update if new <div> is added
+
+
+---
+
+ ✅ What is NodeList?
+
+ Returned by methods like:
+
+   querySelectorAll()
+ Static collection: Does not update if DOM changes.
+ Can use forEach() directly (unlike HTMLCollection).
+
+js
+let buttons = document.querySelectorAll("button");
+buttons.forEach(btn => console.log(btn.textContent)); // works
+
+
+---
+
+ ✅ Difference: HTMLCollection vs NodeList
+
+| Feature             | HTMLCollection                | NodeList                      |
+| ------------------- | ----------------------------- | ----------------------------- |
+| Returned By         | getElementsBy...            | querySelectorAll()          |
+| Live or Static?     | Live (auto-updates)           | Static (does not update)      |
+| forEach() support | ❌ No (convert to array first) | ✅ Yes (can loop easily)       |
+| Contains            | Only elements                 | Elements, text, comments etc. |
+
+---
+
+ 🎨 Styling Elements
+
+ ✅ element.style
+
+Used to change the inline style of an element.
+
+js
+let box = document.getElementById("myBox");
+box.style.color = "red";
+box.style.backgroundColor = "yellow";
+
+
+---
+
+ ⚙️ Attributes
+
+ ✅ setAttribute(name, value)
+
+Sets a new attribute or updates an existing one.
+
+js
+let link = document.querySelector("a");
+link.setAttribute("href", "https://example.com");
+
+
+---
+
+ ✅ removeAttribute(name)
+
+Removes an attribute from an element.
+
+js
+link.removeAttribute("href");
+
+
+---
+
+ 🧱 Creating & Inserting Elements
+
+ ✅ document.createElement(tagName)
+
+Creates a new DOM element in memory (not added to page yet).
+
+js
+let newDiv = document.createElement("div");
+newDiv.textContent = "Hello!";
+
+
+---
+
+ ➕ append() vs appendChild()
+
+ ✅ appendChild()
+
+ Adds a node (only one at a time) as the last child.
+ Only accepts Node objects (like elements or text nodes).
+ Returns the added node.
+
+js
+let container = document.getElementById("box");
+let para = document.createElement("p");
+para.textContent = "I'm a paragraph!";
+container.appendChild(para);
+
+
+---
+
+ ✅ append()
+
+ Adds one or more nodes or text strings.
+ More flexible than appendChild.
+ Does not return anything.
+
+js
+let box = document.getElementById("box");
+box.append("Text", document.createElement("hr"));
+
+
+---
+
+ ✅ Difference: appendChild vs append
+
+| Feature               | appendChild()        | append()                 |
+| --------------------- | ---------------------- | -------------------------- |
+| Accepts               | Only 1 node        | Multiple nodes or text |
+| Can add text directly | ❌ No                   | ✅ Yes                      |
+| Return value          | Returns the added node | Returns undefined      |
+| Flexibility           | Less flexible          | More flexible              |
+
