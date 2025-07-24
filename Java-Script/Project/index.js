@@ -12,4 +12,6 @@ let c = Math.floor(Math.random () * arr3.length)
 
 let arr4 = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
 let d = Math.floor(Math.random () * arr4.length)
-console.log(arr4[d]);
+// console.log(arr4[d]);
+
+document.write("Jeelo")
