@@ -1,0 +1,158 @@
+🔥 Why Do We Need Error Handling in JS?
+
+In JavaScript, your code may fail due to:
+
+ Invalid user input
+ API/server issues
+ Missing data
+ File read errors
+ Unexpected logic bugs
+
+Instead of letting the program crash or behave wrongly, we handle errors gracefully using error handling techniques.
+
+---
+
+ 🧯 Common Error Handling Tools in JS
+
+| Keyword   | Purpose                                               |
+| --------- | ----------------------------------------------------- |
+| try     | Wrap code that might throw an error                   |
+| catch   | Handle the error if it happens                        |
+| finally | Always run this code after try/catch, success or fail |
+| throw   | Manually throw an error                               |
+
+---
+
+ 📍 Syntax of Error Handling
+
+js
+try {
+  // code that might fail
+} catch (error) {
+  // handle the error
+} finally {
+  // always runs (optional)
+}
+
+
+---
+
+ 🧠 Example without error handling
+
+js
+let num = prompt("Enter a number:");
+let square = num  num;
+console.log("Square:", square);
+
+
+❌ If user enters "abc", it gives NaN — not good UX.
+
+---
+
+ ✅ Example with try, catch, and throw
+
+js
+function getSquare(num) {
+  if (isNaN(num)) {
+    throw "Input is not a number";  // manually throw error
+  }
+  return num  num;
+}
+
+try {
+  let input = prompt("Enter a number:");
+  let result = getSquare(Number(input));
+  console.log("Square:", result);
+} catch (error) {
+  console.log("❌ Error:", error);
+} finally {
+  console.log("✔️ Task complete");
+}
+
+
+ 🔍 Output:
+
+If user enters "abc":
+
+
+❌ Error: Input is not a number
+✔️ Task complete
+
+
+If user enters 5:
+
+
+Square: 25
+✔️ Task complete
+
+
+---
+
+ 🧾 What does throw do?
+
+The throw keyword is used to:
+
+ Create your own error
+ Stop execution and jump to catch
+
+js
+throw "Something went wrong!";
+throw new Error("This is a custom error");
+
+
+---
+
+ 💼 Real-Life Example (ATM Machine)
+
+js
+function withdrawMoney(balance, amount) {
+  if (amount > balance) {
+    throw new Error("Insufficient Balance!");
+  }
+  return balance - amount;
+}
+
+try {
+  let remaining = withdrawMoney(500, 1000);
+  console.log("Remaining balance:", remaining);
+} catch (err) {
+  console.log("ATM Error:", err.message);
+}
+
+
+ ✅ Output:
+
+
+ATM Error: Insufficient Balance!
+
+
+---
+
+ 🔁 Bonus: Types of Built-in JS Errors
+
+| Error Type       | What It Means                       |
+| ---------------- | ----------------------------------- |
+| ReferenceError | Using a variable that doesn't exist |
+| TypeError      | Using a value in an invalid way     |
+| SyntaxError    | Writing incorrect code              |
+| RangeError     | Number out of acceptable range      |
+| EvalError      | Error in the eval() function      |
+
+Example:
+
+js
+// ReferenceError
+console.log(x); // x is not defined
+
+
+---
+
+ 📌 Summary
+
+ Use try block for risky code
+ Use catch to handle errors
+ Use throw to manually create errors
+ Use finally to run cleanup code
+ Helps make code robust, user-friendly, and secure
+
+

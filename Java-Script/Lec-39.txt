@@ -1,0 +1,144 @@
+✅ 1. What is a Callback Function?
+
+ 🔹 Definition:
+
+A callback function is a function that is passed as an argument to another function, and it gets called later inside that function.
+
+ 🔹 Why use it?
+
+It’s useful when you want to wait for something to finish before running code — like loading a file, waiting for user input, etc.
+
+ 🔹 Syntax:
+
+js
+function sayHello(name) {
+    console.log("Hello, " + name);
+}
+
+function greet(callback) {
+    let name = "Ali";
+    callback(name);  // calling the passed function
+}
+
+greet(sayHello);
+
+
+ 🧠 In simple terms:
+
+> "I give you a number. You decide what to do with it later." That "what to do" is your callback.
+
+---
+
+ ✅ 2. What is a Closure?
+
+ 🔹 Definition:
+
+A closure is when a function remembers the variables from where it was created, even if you call it somewhere else.
+
+ 🔹 Example:
+
+js
+function outer() {
+    let name = "Ali";
+
+    function inner() {
+        console.log(name);  // inner remembers 'name'
+    }
+
+    return inner;
+}
+
+let myFunc = outer();
+myFunc();  // Output: "Ali"
+
+
+ 🧠 In simple terms:
+
+> A closure is like a child (inner function) who remembers things (variables) from their parent’s home (outer function), even after moving out.
+
+---
+
+ ✅ 3. What is setTimeout() in JavaScript?
+
+ 🔹 Definition:
+
+setTimeout runs a function once after a delay (in milliseconds).
+
+ 🔹 Syntax:
+
+js
+setTimeout(() => {
+    console.log("This runs after 2 seconds");
+}, 2000); // 2000 ms = 2 seconds
+
+
+---
+
+ ✅ 4. What is setInterval() in JavaScript?
+
+ 🔹 Definition:
+
+setInterval runs a function again and again after every given delay.
+
+ 🔹 Syntax:
+
+js
+setInterval(() => {
+    console.log("This runs every 2 seconds");
+}, 2000); // runs repeatedly every 2 seconds
+
+
+ ✅ Example: change background color every second
+
+js
+setInterval(() => {
+    document.body.style.backgroundColor = "lightblue";
+}, 1000);
+
+
+---
+
+ ✅ 5. What is async in JavaScript?
+
+ 🔹 Definition:
+
+async is a keyword used to create a function that can use await to pause and wait for a Promise to complete.
+
+It is used to handle asynchronous (delayed) tasks like fetching data from the internet.
+
+---
+
+ 🔹 Syntax:
+
+js
+async function fetchData() {
+    let result = await fetch("https://api.example.com/data");
+    let data = await result.json();
+    console.log(data);
+}
+
+fetchData();
+
+
+ async makes a function return a Promise.
+ await pauses until the fetch() Promise is completed.
+
+---
+
+ 🧠 In simple terms:
+
+> async and await are like saying:
+> “Wait here until my data is ready. Then continue.”
+
+---
+
+ ✅ Summary Table:
+
+| Concept     | What it does                          | Keyword/Syntax Example                   |
+| ----------- | ------------------------------------- | ---------------------------------------- |
+| Callback    | Pass function as argument             | greet(sayHello)                        |
+| Closure     | Inner function remembers outer vars   | function inner() { console.log(name) } |
+| setTimeout  | Runs once after delay                 | setTimeout(fn, 1000)                   |
+| setInterval | Runs again & again after delay        | setInterval(fn, 1000)                  |
+| async/await | Handle delayed (async) tasks smoothly | async function(){ await something }    |
+

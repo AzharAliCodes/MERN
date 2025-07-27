@@ -1,0 +1,139 @@
+ 🚀 What is async/await?
+
+async/await is a modern way to handle Promises in JavaScript.
+It helps you write asynchronous code in a way that looks and behaves like synchronous (step-by-step) code.
+
+---
+
+ 🔑 Keywords
+
+ ✅ async:
+
+Used before a function to tell JavaScript:
+
+> "This function will contain asynchronous code and return a Promise."
+
+ ✅ await:
+
+Used inside an async function to wait for a Promise to resolve or reject before moving to the next line.
+
+---
+
+ 🧾 Syntax:
+
+js
+async function functionName() {
+  try {
+    let result = await somePromise;
+    // Use result
+  } catch (error) {
+    // Handle error
+  }
+}
+
+
+---
+
+ 🧠 Example with Explanation:
+
+js
+function fetchData() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve("Data fetched!");
+    }, 2000);
+  });
+}
+
+// using async/await
+async function getData() {
+  console.log("Fetching...");
+  let result = await fetchData(); // wait until fetchData is done
+  console.log(result); // prints: "Data fetched!"
+}
+
+getData();
+
+
+ 📝 Output:
+
+
+Fetching...
+(Data fetched after 2 seconds)
+Data fetched!
+
+
+---
+
+ ❗ Why use async/await?
+
+| Benefit                 | Description                                                    |
+| ----------------------- | -------------------------------------------------------------- |
+| ✅ Clean Syntax          | Code looks like simple step-by-step code                       |
+| ✅ Easier to Read        | No nested .then() or .catch() like in Promise chains       |
+| ✅ Better Error Handling | You can use try...catch to handle errors like in normal code |
+
+---
+
+ ❌ Without async/await (Promise chain):
+
+js
+fetchData()
+  .then((data) => {
+    return processData(data);
+  })
+  .then((result) => {
+    console.log(result);
+  })
+  .catch((error) => {
+    console.log(error);
+  });
+
+
+ ✅ With async/await:
+
+js
+async function handleData() {
+  try {
+    let data = await fetchData();
+    let result = await processData(data);
+    console.log(result);
+  } catch (err) {
+    console.log(err);
+  }
+}
+
+
+---
+
+ 📌 Important Notes:
+
+1. await can only be used inside an async function.
+2. If the function you're awaiting fails, it will throw an error — so always use try...catch.
+3. async function always returns a Promise, even if you don’t use await.
+
+---
+
+ 🔁 Real-Life Example:
+
+js
+async function orderPizza() {
+  console.log("Ordering pizza...");
+
+  await new Promise((resolve) => setTimeout(resolve, 2000)); // wait 2 sec
+
+  console.log("Pizza delivered!");
+}
+
+orderPizza();
+
+
+> Output:
+
+
+Ordering pizza...
+(after 2 seconds)
+Pizza delivered!
+
+
+---

@@ -1,0 +1,154 @@
+ 🔹 1. Promise.all([])
+
+ ✅ What it does:
+
+Waits for all promises in the array to be fulfilled.
+If any one fails, it rejects immediately.
+
+ 🔁 Use case:
+
+ When you need to run multiple tasks together and all must succeed.
+
+ 🧠 Example:
+
+js
+let p1 = Promise.resolve(10);
+let p2 = Promise.resolve(20);
+let p3 = Promise.resolve(30);
+
+Promise.all([p1, p2, p3])
+  .then(results => {
+    console.log("All success:", results);
+  })
+  .catch(error => {
+    console.log("At least one failed:", error);
+  });
+
+
+ ❌ If any fails:
+
+js
+let p1 = Promise.resolve("A");
+let p2 = Promise.reject("Error in B");
+
+Promise.all([p1, p2])
+  .then(results => console.log(results))
+  .catch(error => console.log("❌ Error:", error));
+
+
+---
+
+ 🔹 2. Promise.allSettled([])
+
+ ✅ What it does:
+
+Waits for all promises to finish, whether they succeed or fail.
+Always resolves, never rejects.
+
+ 🔁 Use case:
+
+ When you want the status of all promises, even if some fail.
+
+ 🧠 Example:
+
+js
+let p1 = Promise.resolve("Done 1");
+let p2 = Promise.reject("Failed 2");
+let p3 = Promise.resolve("Done 3");
+
+Promise.allSettled([p1, p2, p3])
+  .then(results => console.log(results));
+
+
+ 📝 Output:
+
+js
+[
+  { status: 'fulfilled', value: 'Done 1' },
+  { status: 'rejected', reason: 'Failed 2' },
+  { status: 'fulfilled', value: 'Done 3' }
+]
+
+
+---
+
+ 🔹 3. Promise.race([])
+
+ ✅ What it does:
+
+Returns the result of the first settled promise (fulfilled or rejected).
+
+ 🔁 Use case:
+
+ When you want the result of the fastest operation (like fastest API).
+
+ 🧠 Example:
+
+js
+let fast = new Promise(resolve => setTimeout(() => resolve("Fast!"), 100));
+let slow = new Promise(resolve => setTimeout(() => resolve("Slow!"), 500));
+
+Promise.race([fast, slow])
+  .then(result => console.log("🏁 Winner:", result));
+
+
+ ❌ If first settles with error:
+
+js
+let p1 = new Promise((_, reject) => setTimeout(() => reject("Error A"), 100));
+let p2 = new Promise(resolve => setTimeout(() => resolve("Success B"), 200));
+
+Promise.race([p1, p2])
+  .then(result => console.log(result))
+  .catch(err => console.log("❌ Error:", err));
+
+
+---
+
+ 🔹 4. Promise.any([])
+
+ ✅ What it does:
+
+Returns the value of the first fulfilled promise.
+Ignores rejected ones.
+Only rejects if all fail.
+
+ 🔁 Use case:
+
+ When any one success is enough (like trying 3 mirror servers).
+
+ 🧠 Example:
+
+js
+let p1 = Promise.reject("Error 1");
+let p2 = Promise.resolve("Success 2");
+let p3 = Promise.resolve("Success 3");
+
+Promise.any([p1, p2, p3])
+  .then(result => console.log("✅ First success:", result))
+  .catch(error => console.log("All failed:", error));
+
+
+ ❌ If all fail:
+
+js
+let p1 = Promise.reject("Fail 1");
+let p2 = Promise.reject("Fail 2");
+
+Promise.any([p1, p2])
+  .then(result => console.log(result))
+  .catch(error => console.log("❌ All failed:", error));
+
+
+---
+
+ 📊 Summary Table
+
+| Method                 | When It Resolves                           | When It Rejects                 |
+| ---------------------- | ------------------------------------------ | ------------------------------- |
+| Promise.all()        | When all promises fulfill              | If any one fails            |
+| Promise.allSettled() | Always resolves with status of each    | Never rejects                   |
+| Promise.race()       | When first promise settles (any)       | If first settles with error |
+| Promise.any()        | When first successful promise fulfills | If all promises fail        |
+
+---

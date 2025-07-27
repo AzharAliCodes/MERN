@@ -1,0 +1,85 @@
+📌 1. Callback Hell
+
+ ✅ What is a Callback?
+
+A callback is a function passed as an argument to another function, usually to run after some task is done.
+
+js
+function greet(name, callback) {
+  console.log("Hello " + name);
+  callback();
+}
+
+function sayBye() {
+  console.log("Goodbye!");
+}
+
+greet("Ali", sayBye);
+
+
+ ❌ What is Callback Hell?
+
+When you have too many nested callbacks, especially for asynchronous operations like API calls or timers — it becomes hard to read, debug, and manage. This is called callback hell or "Pyramid of Doom".
+
+ 🔁 Example:
+
+js
+setTimeout(() => {
+  console.log("Step 1");
+  setTimeout(() => {
+    console.log("Step 2");
+    setTimeout(() => {
+      console.log("Step 3");
+      setTimeout(() => {
+        console.log("Step 4");
+      }, 1000);
+    }, 1000);
+  }, 1000);
+}, 1000);
+
+
+ 🔧 Problems:
+
+ Hard to read and understand
+ Difficult to handle errors
+ Code becomes messy
+
+ 💡 Solution:
+
+Use Promises or async/await to write cleaner code.
+
+---
+
+ 📌 2. Inversion of Control
+
+ ✅ What is it?
+
+Inversion of Control (IoC) is a design pattern where you give control of some part of your code (like what to do next) to another function or system.
+
+In JavaScript, when you pass a callback to a function (like to a library or API), you lose control of when, how, and how many times that callback is executed.
+
+ 🤯 Problem:
+
+You trust an external function (like a library or API) to call your callback properly. If it doesn't, your program may break. That’s inversion of control — you’ve lost control of the flow.
+
+ 🧠 Example:
+
+js
+function getData(callback) {
+  // Imagine this calls an external API
+  setTimeout(() => {
+    callback("Here is your data");
+  }, 1000);
+}
+
+// You're trusting getData to call your callback
+getData((data) => {
+  console.log(data); // But you don't control when it happens
+});
+
+
+ 🛠️ Solution:
+
+Use Promises or async/await so that you control how the result is handled.
+
+
