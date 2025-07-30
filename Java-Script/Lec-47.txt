@@ -1,0 +1,79 @@
+ 🔒 Web Storage API – Overview
+
+The Web Storage API lets websites store data in the browser. It's useful for saving data without using a server or database.
+
+It has two main types:
+
+ 1. Local Storage
+
+ 2. Session Storage
+
+---
+
+ 🧠 What is Session Storage?
+
+ Data is stored per tab.
+ Gets cleared when you close the tab.
+ Good for temporary data like a user session, quiz answers, etc.
+
+ 📦 Common Methods:
+
+| Method                | Description            |
+| --------------------- | ---------------------- |
+| setItem(key, value) | Saves data             |
+| getItem(key)        | Reads data             |
+| removeItem(key)     | Deletes a specific key |
+| clear()             | Removes all data       |
+
+ ✅ Example:
+
+javascript
+// Save data in session storage
+sessionStorage.setItem("username", "Ali");
+
+// Get data
+console.log(sessionStorage.getItem("username")); // Output: Ali
+
+// Remove a specific key
+sessionStorage.removeItem("username");
+
+// Clear everything
+sessionStorage.clear();
+
+
+---
+
+ 📍 What is Local Storage?
+
+ Data is stored in the browser permanently.
+ Doesn’t delete when you close the tab or browser.
+ Useful for things like theme preferences, login tokens, etc.
+
+ 📦 Same methods as sessionStorage:
+
+javascript
+localStorage.setItem("theme", "dark");
+console.log(localStorage.getItem("theme")); // Output: dark
+localStorage.removeItem("theme");
+localStorage.clear();
+
+
+---
+
+ 🔍 Difference between Session Storage and Local Storage
+
+| Feature          | Local Storage                     | Session Storage                 |
+| ---------------- | --------------------------------- | ------------------------------- |
+| Lifetime     | Until manually deleted            | Only while tab is open          |
+| Scope        | Shared across tabs/windows        | Per tab only                    |
+| Storage Size | \~5MB (can vary)                  | \~5MB (can vary)                |
+| Use Case     | Save theme, user settings, tokens | Temporary form data, session ID |
+| Access       | localStorage                    | sessionStorage                |
+
+---
+
+ 📌 Summary in Simple Words:
+
+ Use localStorage when you want data to stay even after closing the browser.
+ Use sessionStorage when you want data to go away after the tab is closed.
+
