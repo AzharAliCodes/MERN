@@ -5,10 +5,10 @@ function AllCards({data}) {
         return (
           <div style={{ backgroundColor: "red", width: "350px", height: "400px" }}>
             {/* <p>{data.id}</p> */}
-            <img src="" alt="" />
-            {/* <h2>{data.title}</h2> */}
-            <p>500</p>
-            <p>Description</p>
+            <img src={data.thumbnail} alt="" />
+            <h2>{data.title}</h2>
+            <p>${data.price}</p>
+            <p>{data.description}</p>
           </div>
         );  
       })}
