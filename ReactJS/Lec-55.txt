@@ -1,0 +1,112 @@
+ ✅ Lec 56 – Props in React
+
+---
+
+ 📌 What are Props in React?
+
+Props (short for properties) are used to pass data from one component to another — typically from a parent to a child component.
+
+> 🔹 Think of props like function arguments but for components.
+
+---
+
+ 🧠 Why Use Props?
+
+ To reuse components with different data.
+ To keep components dynamic and flexible.
+ Enables unidirectional data flow (top → down).
+
+---
+
+ ✅ Props Syntax
+
+ 🧩 Step-by-Step:
+
+ ① Create a Functional Component that accepts props
+
+jsx
+function Greeting(props) {
+  return <h1>Hello, {props.name}!</h1>;
+}
+
+
+ ② Pass Props from Parent Component
+
+jsx
+function App() {
+  return (
+    <div>
+      <Greeting name="Ali" />
+      <Greeting name="Jafar" />
+    </div>
+  );
+}
+
+
+> ✅ name="Ali" and name="Jafar" are passed as props.
+
+---
+
+ 🔍 What’s Happening?
+
+jsx
+<Greeting name="Ali" />
+
+
+This passes the value "Ali" to the Greeting component as a prop named name.
+
+Inside Greeting, you access it with:
+
+jsx
+props.name
+
+
+---
+
+ ✅ Destructuring Props (Cleaner Syntax)
+
+Instead of writing props.name, you can directly extract the props:
+
+jsx
+function Greeting({ name }) {
+  return <h1>Hello, {name}!</h1>;
+}
+
+
+---
+
+ 📦 Passing Multiple Props Example
+
+jsx
+function UserCard({ name, age }) {
+  return (
+    <div>
+      <h2>{name}</h2>
+      <p>Age: {age}</p>
+    </div>
+  );
+}
+
+function App() {
+  return <UserCard name="Ali" age={21} />;
+}
+
+
+---
+
+ ❌ Props Are Read-Only
+
+You cannot modify props inside the child component. If you need to manage data, use state instead.
+
+---
+
+ 📝 Summary
+
+| Concept   | Explanation                                            |
+| --------- | ------------------------------------------------------ |
+| Props     | Pass data from parent to child components              |
+| Syntax    | <Component propName="value" />                       |
+| Accessing | props.propName or ({ propName }) via destructuring |
+| Read-only | Props cannot be changed inside child component         |
+| Use case  | Reusability & dynamic rendering of components          |
+
