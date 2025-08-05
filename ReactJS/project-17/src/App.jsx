@@ -1,5 +1,5 @@
-import React from 'react'
-
+import AllCards from './components/AllCards'
+import {data} from "./utils/data"
 function App() {
 return (
     <>
@@ -8,6 +8,9 @@ return (
       <input type="text" placeholder='kya chai yai...'/>
       <button>search</button>
     </div>
+    console.log(data);
+
+    <AllCards data={data}/>
     </>
   )
 }
