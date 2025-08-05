@@ -1,0 +1,250 @@
+1. OOPs Concepts
+2. Types in JS with Syntax & Example
+3. Prototype
+4. call(), apply(), bind() – What, Why, and How with Examples
+
+---
+
+ ✅ 1. What is OOP in JavaScript?
+
+OOP (Object-Oriented Programming) is a programming style based on the concept of objects which can contain data (properties) and functions (methods).
+
+In JavaScript, OOP helps organize code and make it reusable.
+
+---
+
+ ✅ 2. Main OOPs Concepts in JavaScript
+
+| Concept           | Meaning                                                |
+| ----------------- | ------------------------------------------------------ |
+| Class         | Blueprint for creating objects                         |
+| Object        | Instance of a class                                    |
+| Encapsulation | Hiding internal details of an object                   |
+| Abstraction   | Hiding complexity and showing only essential parts     |
+| Inheritance   | Object gets properties/methods from another object     |
+| Polymorphism  | Same function behaves differently for different inputs |
+
+---
+
+ 🔹 Class and Object
+
+ ✅ Syntax:
+
+js
+class Person {
+  constructor(name) {
+    this.name = name;
+  }
+
+  greet() {
+    console.log(Hello, I am ${this.name});
+  }
+}
+
+const p1 = new Person("Ali");
+p1.greet();  // Output: Hello, I am Ali
+
+
+---
+
+ 🔹 Encapsulation
+
+Encapsulation means bundling data (properties) and methods in one unit, and controlling access to them.
+
+ ✅ Example:
+
+js
+class Car {
+  engineNumber; // private property
+
+  constructor(brand, engineNumber) {
+    this.brand = brand;
+    this.engineNumber = engineNumber;
+  }
+
+  getEngineNumber() {
+    return this.engineNumber;
+  }
+}
+
+const car = new Car("Toyota", "ENG12345");
+console.log(car.getEngineNumber()); // OK
+console.log(car.engineNumber);     // ❌ Error: Private field
+
+
+---
+
+ 🔹 Abstraction
+
+Show only necessary features. Hide the rest.
+
+ ✅ Example:
+
+js
+class BankAccount {
+  constructor(balance) {
+    this._balance = balance;
+  }
+
+  deposit(amount) {
+    if (amount > 0) this._balance += amount;
+  }
+
+  getBalance() {
+    return this._balance;
+  }
+}
+
+const account = new BankAccount(1000);
+account.deposit(500);
+console.log(account.getBalance()); // Output: 1500
+
+
+---
+
+ 🔹 Inheritance
+
+One class can inherit from another.
+
+ ✅ Syntax & Example:
+
+js
+class Animal {
+  speak() {
+    console.log("Animal speaks");
+  }
+}
+
+class Dog extends Animal {
+  speak() {
+    console.log("Dog barks");
+  }
+}
+
+const dog = new Dog();
+dog.speak();  // Output: Dog barks
+
+
+---
+
+ 🔹 Polymorphism
+
+Same method behaves differently in different classes.
+
+ ✅ Example:
+
+js
+class Shape {
+  draw() {
+    console.log("Drawing shape");
+  }
+}
+
+class Circle extends Shape {
+  draw() {
+    console.log("Drawing circle");
+  }
+}
+
+class Square extends Shape {
+  draw() {
+    console.log("Drawing square");
+  }
+}
+
+const shapes = [new Circle(), new Square()];
+shapes.forEach(shape => shape.draw());
+// Output:
+// Drawing circle
+// Drawing square
+
+
+---
+
+ ✅ 3. What is Prototype in JS?
+
+Every object in JavaScript has a hidden property called [[Prototype]] or __proto__. This is used for inheritance.
+
+JavaScript uses prototype chaining to share properties and methods between objects.
+
+ ✅ Example:
+
+js
+function Person(name) {
+  this.name = name;
+}
+
+Person.prototype.sayHello = function() {
+  console.log("Hello " + this.name);
+};
+
+const person1 = new Person("Ali");
+person1.sayHello(); // Output: Hello Ali
+
+
+> 👉 Here, sayHello is not inside the object but is accessible via the prototype.
+
+---
+
+ ✅ 4. call(), apply(), and bind()
+
+ 🔹 Why use them?
+
+To borrow functions or set the this context of a function manually.
+
+---
+
+ 🔹 call()
+
+Calls a function with a given this value and arguments one by one.
+
+ ✅ Syntax:
+
+js
+function greet(city) {
+  console.log(Hello, I am ${this.name} from ${city});
+}
+
+const person = { name: "Ali" };
+
+greet.call(person, "Delhi");
+// Output: Hello, I am Ali from Delhi
+
+
+---
+
+ 🔹 apply()
+
+Same as call() but takes arguments as an array.
+
+ ✅ Syntax:
+
+js
+greet.apply(person, ["Mumbai"]);
+// Output: Hello, I am Ali from Mumbai
+
+
+---
+
+ 🔹 bind()
+
+Returns a new function with the this value bound to it. Doesn’t call it immediately.
+
+ ✅ Syntax:
+
+js
+const boundGreet = greet.bind(person, "Pune");
+boundGreet();  // Output: Hello, I am Ali from Pune
+
+
+---
+
+ ✅ Summary Table
+
+| Concept   | Use Case                                     |
+| --------- | -------------------------------------------- |
+| call()  | Call function immediately with custom this |
+| apply() | Same as call() but arguments in array      |
+| bind()  | Returns new function with bound this       |
+
+
