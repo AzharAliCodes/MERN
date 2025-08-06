@@ -35,7 +35,12 @@ function App() {
       </div>
 
       {filterData.length === 0 ? (
-        <p className="text-center text-gray-500 text-lg mt-8">No items found</p>
+        <p
+          className="text-center
+         text-gray-500 text-lg mt-8"
+        >
+          No items found
+        </p>
       ) : (
         <AllCards data={filterData} />
       )}
