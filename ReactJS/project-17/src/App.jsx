@@ -14,8 +14,6 @@ function App() {
   return (
     <>
       <div className="flex flex-col items-center justify-center bg-gradient-to-r from-blue-100 via-sky-100 to-blue-200 py-10 px-4 space-y-6">
-
-
         <h1 className="text-3xl font-bold text-gray-800">
           Raste kaa maal saste mai
         </h1>
@@ -36,7 +34,11 @@ function App() {
         </div>
       </div>
 
-      <AllCards data={filterData} />
+      {filterData.length === 0 ? (
+        <p className="text-center text-gray-500 text-lg mt-8">No items found</p>
+      ) : (
+        <AllCards data={filterData} />
+      )}
     </>
   );
 }
