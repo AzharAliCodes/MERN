@@ -1,6 +1,6 @@
 import React from 'react'
 
-const TodoList = (task) => {
+const TodoList = ({task}) => {
   return (
     <div>
       <p>Task is:{task}</p>
