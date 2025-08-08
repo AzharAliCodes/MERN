@@ -1,6 +1,5 @@
 import React from 'react'
-
-const TodoList = ({task}) => {
+const TodoList = ({tasks}) => {
   return (
      <div className="mt-4 text-center">
       {tasks.length === 0 ? (
