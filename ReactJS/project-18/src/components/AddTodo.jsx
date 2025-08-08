@@ -2,14 +2,14 @@ import React, { useEffect, useState } from "react";
 import TodoList from "./TodoList";
 const AddTodo = () => {
   let [Task, SetTask] = useState("");
-  let [Tasks, SetTasks] = useState([]);
-  function AddTask() {
+  let [Tasks, SetTasks] = useState(() => JSON.parse(localStorage.getItem('MyArray')) || []);
+function AddTask() {
     SetTasks([...Tasks, Task]);
     SetTask("");
   }
 
   useEffect( () => {
-    console.log(Tasks);
+    localStorage.setItem('MyArray', JSON.stringify(Tasks))
   },[Tasks])
   return (
     <>
