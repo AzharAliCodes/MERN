@@ -28,7 +28,7 @@ const AddTodo = () => {
         Add
       </button>
     </div>
-    <TodoList task={Task} />
+    <TodoList task={Tasks} />
     </>
   );
 };
