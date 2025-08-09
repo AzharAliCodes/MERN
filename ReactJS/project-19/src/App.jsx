@@ -1,8 +1,15 @@
-
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import Matches from './components/Matches'
+import Home from './components/Home'
 function App() {
 
   return (
-    <div>Hello world</div>
+    <BrowserRouter>
+     <Routes>
+      <Route path='/' element={<Home/>}/>
+      <Route path='/matches' element={<Matches/>}/>
+     </Routes>
+    </BrowserRouter>
   )
 }
 
