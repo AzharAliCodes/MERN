@@ -7,8 +7,7 @@ const Home = () => {
   return (
     <div className="bg-black min-h-screen">
 
-      {/* Navbar container with even spacing and smaller width */}
-      <div className="bg-blue-900 text-white max-w-2xl mx-auto flex justify-evenly items-center p-3 rounded-md">
+      <div className="bg-blue-900 text-white max-w-2xl mx-auto flex justify-evenly items-center pt-3 ">
         <Link
           to="/"
           className={`px-3 py-1 rounded-md text-sm sm:text-base transition duration-200 
@@ -43,8 +42,7 @@ const Home = () => {
         </Link>
       </div>
 
-      {/* Page Content */}
-      <div className="max-w-2xl mx-auto mt-6 p-4">
+      <div className="max-w-2xl mx-auto">
         <Outlet />
       </div>
     </div>
