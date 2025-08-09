@@ -1,6 +1,8 @@
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import Matches from './components/Matches'
 import Home from './components/Home'
+import News from './components/News'
+import Tables from './components/Tables'
 function App() {
 
   return (
@@ -8,6 +10,9 @@ function App() {
      <Routes>
       <Route path='/' element={<Home/>}/>
       <Route path='/matches' element={<Matches/>}/>
+      <Route path='/news' element={<News/>}/>
+      <Route path='/tables' element={<Tables/>}/>
+      <Route path='*' element={<p>404 page not found</p>}/>
      </Routes>
     </BrowserRouter>
   )
