@@ -8,14 +8,15 @@ function App() {
   return (
     <BrowserRouter>
      <Routes>
-      <Route path='/' element={<Home/>}/>
-      <Route path='/matches' element={<Matches/>}/>
-      <Route path='/news' element={<News/>}/>
-      <Route path='/tables' element={<Tables/>}/>
+      <Route path='/' element={<Home/>}>
+        <Route index element={<Matches/>}/>
+        <Route path='news' element={<News/>}/>
+        <Route path='tables' element={<Tables/>}/>
+      </Route>
       <Route path='*' element={<p>404 page not found</p>}/>
      </Routes>
     </BrowserRouter>
-  )
+  );
 }
 
 export default App
