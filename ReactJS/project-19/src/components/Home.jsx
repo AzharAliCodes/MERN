@@ -1,16 +1,17 @@
 import React from 'react'
 import { Link, Outlet, useLocation } from 'react-router-dom'
 
-
 const Home = () => {
   const location = useLocation()
 
   return (
-    <>
-      <div className="bg-blue-900 text-white flex gap-6 p-4">
+    <div className="bg-black min-h-screen">
+
+      {/* Navbar container with even spacing and smaller width */}
+      <div className="bg-blue-900 text-white max-w-2xl mx-auto flex justify-evenly items-center p-3 rounded-md">
         <Link
           to="/"
-          className={`px-3 py-1 rounded-md transition duration-200 
+          className={`px-3 py-1 rounded-md text-sm sm:text-base transition duration-200 
             ${location.pathname === '/' 
               ? 'bg-blue-700 underline underline-offset-4' 
               : 'hover:bg-blue-800'}`
@@ -21,7 +22,7 @@ const Home = () => {
 
         <Link
           to="/news"
-          className={`px-3 py-1 rounded-md transition duration-200 
+          className={`px-3 py-1 rounded-md text-sm sm:text-base transition duration-200 
             ${location.pathname === '/news' 
               ? 'bg-blue-700 underline underline-offset-4' 
               : 'hover:bg-blue-800'}`
@@ -32,7 +33,7 @@ const Home = () => {
 
         <Link
           to="/tables"
-          className={`px-3 py-1 rounded-md transition duration-200 
+          className={`px-3 py-1 rounded-md text-sm sm:text-base transition duration-200 
             ${location.pathname === '/tables' 
               ? 'bg-blue-700 underline underline-offset-4' 
               : 'hover:bg-blue-800'}`
@@ -42,8 +43,11 @@ const Home = () => {
         </Link>
       </div>
 
-      <Outlet />
-    </>
+      {/* Page Content */}
+      <div className="max-w-2xl mx-auto mt-6 p-4">
+        <Outlet />
+      </div>
+    </div>
   )
 }
 

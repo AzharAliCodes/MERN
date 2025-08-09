@@ -2,7 +2,7 @@ import React from 'react'
 
 const Matches = () => {
   return (
-    <div>
+    <div className='bg-blue-900 '>
        Matches
     </div>
   )
