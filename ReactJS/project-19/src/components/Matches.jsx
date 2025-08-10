@@ -3951,17 +3951,158 @@ const Matches = () => {
     },
   };
   return (
-    <div className="bg-blue-900 ">
-      <div>
-        <p>1st Match</p>
-        <p>Fri, 22 Mar</p>
-        <img src="" alt="img" />
-        <p>Rcb</p>
-        <p>173/<span>6</span><span>(20)</span></p>
-        <img src="" alt="img" />
-        <p>CSK</p>
-        <p>174/<span>4</span><span>(18.4)</span></p>
-        <p>CsK won by 6 wkts</p>
+    <div className="bg-white max-w-5xl grid grid-cols-1 md:grid-cols-2">
+      <div className="bg-gray-800 text-white max-w-md m-1 p-4 space-y-4 max-h-44">
+        {/* First line */}
+        <div className="flex justify-between text-sm">
+          <p>1st Match</p>
+          <p>Fri, 22 Mar</p>
+        </div>
+
+        {/* First team line */}
+        <div className="flex justify-between items-center">
+          <div className="flex items-center gap-2">
+            <img
+              src="https://via.placeholder.com/24"
+              alt="Rcb"
+              className="w-6 h-6 object-contain"
+            />
+            <p>Rcb</p>
+          </div>
+          <p>
+            173/<span>6</span>
+            <span>(20)</span>
+          </p>
+        </div>
+        <div className="flex justify-between items-center">
+          <div className="flex items-center gap-2">
+            <img
+              src="https://via.placeholder.com/24"
+              alt="Csk"
+              className="w-6 h-6 object-contain"
+            />
+            <p>CSK</p>
+          </div>
+          <p>
+            174/<span>4</span>
+            <span>(18.4)</span>
+          </p>
+        </div>
+        <p className="text-center text-sm font-semibold">CsK won by 6 wkts</p>
+      </div>
+      <div className="bg-gray-800 text-white max-w-md m-1 p-4 space-y-4 max-h-44">
+        {/* First line */}
+        <div className="flex justify-between text-sm">
+          <p>1st Match</p>
+          <p>Fri, 22 Mar</p>
+        </div>
+
+        {/* First team line */}
+        <div className="flex justify-between items-center">
+          <div className="flex items-center gap-2">
+            <img
+              src="https://via.placeholder.com/24"
+              alt="Rcb"
+              className="w-6 h-6 object-contain"
+            />
+            <p>Rcb</p>
+          </div>
+          <p>
+            173/<span>6</span>
+            <span>(20)</span>
+          </p>
+        </div>
+        <div className="flex justify-between items-center">
+          <div className="flex items-center gap-2">
+            <img
+              src="https://via.placeholder.com/24"
+              alt="Csk"
+              className="w-6 h-6 object-contain"
+            />
+            <p>CSK</p>
+          </div>
+          <p>
+            174/<span>4</span>
+            <span>(18.4)</span>
+          </p>
+        </div>
+        <p className="text-center text-sm font-semibold">CsK won by 6 wkts</p>
+      </div>
+      <div className="bg-gray-800 text-white max-w-md m-1 p-4 space-y-4 max-h-44">
+        {/* First line */}
+        <div className="flex justify-between text-sm">
+          <p>1st Match</p>
+          <p>Fri, 22 Mar</p>
+        </div>
+
+        {/* First team line */}
+        <div className="flex justify-between items-center">
+          <div className="flex items-center gap-2">
+            <img
+              src="https://via.placeholder.com/24"
+              alt="Rcb"
+              className="w-6 h-6 object-contain"
+            />
+            <p>Rcb</p>
+          </div>
+          <p>
+            173/<span>6</span>
+            <span>(20)</span>
+          </p>
+        </div>
+        <div className="flex justify-between items-center">
+          <div className="flex items-center gap-2">
+            <img
+              src="https://via.placeholder.com/24"
+              alt="Csk"
+              className="w-6 h-6 object-contain"
+            />
+            <p>CSK</p>
+          </div>
+          <p>
+            174/<span>4</span>
+            <span>(18.4)</span>
+          </p>
+        </div>
+        <p className="text-center text-sm font-semibold">CsK won by 6 wkts</p>
+      </div>
+      <div className="bg-gray-800 text-white max-w-md m-1 p-4 space-y-4 max-h-44">
+        {/* First line */}
+        <div className="flex justify-between text-sm">
+          <p>1st Match</p>
+          <p>Fri, 22 Mar</p>
+        </div>
+
+        {/* First team line */}
+        <div className="flex justify-between items-center">
+          <div className="flex items-center gap-2">
+            <img
+              src="https://via.placeholder.com/24"
+              alt="Rcb"
+              className="w-6 h-6 object-contain"
+            />
+            <p>Rcb</p>
+          </div>
+          <p>
+            173/<span>6</span>
+            <span>(20)</span>
+          </p>
+        </div>
+        <div className="flex justify-between items-center">
+          <div className="flex items-center gap-2">
+            <img
+              src="https://via.placeholder.com/24"
+              alt="Csk"
+              className="w-6 h-6 object-contain"
+            />
+            <p>CSK</p>
+          </div>
+          <p>
+            174/<span>4</span>
+            <span>(18.4)</span>
+          </p>
+        </div>
+        <p className="text-center text-sm font-semibold">CsK won by 6 wkts</p>
       </div>
     </div>
   );
