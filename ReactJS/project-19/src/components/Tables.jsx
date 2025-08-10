@@ -1730,7 +1730,7 @@ const Tables = () => {
   })
   return (
     (
-    <div className="bg-gray-900 text-white max-w-3xl mx-auto p-4 rounded-md">
+    <div className="bg-gray-900 text-white max-w-3xl mx-auto p-4 rounded-md h-screen">
   <table className="w-full border-collapse">
     <thead>
       <tr className="border-b border-white border-opacity-50">
@@ -1744,7 +1744,10 @@ const Tables = () => {
       </tr>
     </thead>
     <tbody>
-      <tr className="border-b border-white border-opacity-50">
+      <div className="w-[250%] flex justify-center items-center h-screen">
+      <div className="pl-[30px] w-10 h-10 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
+    </div>
+      {/* <tr className="border-b border-white border-opacity-50">
         <td className="text-left py-2 w-2/5 flex items-center gap-2">
           <img src="https://via.placeholder.com/24" alt="KKR" className="inline-block" />
           <span>KKR</span>
@@ -1755,12 +1758,10 @@ const Tables = () => {
         <td className="text-left py-2">+1.453</td>
         <td className="text-left py-2">16</td>
         <td className="text-right py-2 w-1/5">w w w m wm</td>
-      </tr>
+      </tr> */}
     </tbody>
   </table>
 </div>
-
-
     )
   )
 }
