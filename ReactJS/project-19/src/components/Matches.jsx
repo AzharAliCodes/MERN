@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const Matches = () => {
   let data = {
@@ -3950,6 +3950,11 @@ const Matches = () => {
       webURL: "www.cricbuzz.com/cricket-series/",
     },
   };
+
+  let [Data ,setData] = useState([])
+  useEffect(() => (
+    setData(matchDetails.matchDetailsMap)
+  ))
   return (
     <div className="bg-white max-w-5xl grid grid-cols-1 md:grid-cols-2">
       <div className="bg-gray-800 text-white max-w-md m-1 p-4 space-y-4 max-h-44">
