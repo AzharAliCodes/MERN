@@ -1680,7 +1680,7 @@ const Tables = () => {
             <th className="text-left py-2">L</th>
             <th className="text-left py-2">NRR</th>
             <th className="text-left py-2">Pts</th>
-            <th className="text-right py-2 w-1/5">Last 5</th>
+            <th className="text-right py-2 pr-10 w-1/5">Last 5</th>
           </tr>
         </thead>
         <tbody>
@@ -1714,7 +1714,16 @@ const Tables = () => {
                   <td className="text-left py-2">{matchesLost}</td>
                   <td className="text-left py-2">{nrr}</td>
                   <td className="text-left py-2">{points}</td>
-                   {form.reverse().map ((data) =><td className="text-right py-2 w-1/5">{data}</td>) }
+                  <td  className="text-left py-2 pl-10">
+                  {form
+                    .reverse()
+                    .map((data) =>
+                      data === "W" ? (
+                        <i className="fi fi-ss-check-circle text-green-500 text-sm"></i>
+                      ) : (
+                        <i className="fi fi-sr-cross-circle text-red-500 text-sm"></i>
+                      )
+                    )}</td>
                 </tr>
               )
             )
