@@ -3951,10 +3951,38 @@ const Matches = () => {
     },
   };
 
-  let [Data ,setData] = useState([])
-  useEffect(() => (
-    setData(matchDetails.matchDetailsMap)
-  ))
+  let [Data, setData] = useState([]);
+  // const seriesId = data.matchDetails[0].matchDetailsMap.match[0].matchInfo;
+    // console.log(data.matchDetails)
+  // const seriesIds = data.matchDetails.filter(
+  //   (item => item.matchDetailsMap).map(item) => console.log(item.matchDetailsMap)
+  // );
+  data.matchDetails
+  .filter(item => item.matchDetailsMap) 
+  .forEach(item => {
+    const map = item.matchDetailsMap;
+
+    // Print the key before looping the matches
+    let  k=  map.key;
+
+    // Loop through the 'match' array
+    map.match.forEach(matchItem => {
+      console.log(k);
+      console.log(matchItem.matchInfo.matchDesc);
+    });
+  });
+
+
+// console.log(allMatchDetailsMap);
+
+
+  // console.log(seriesIds); // [7607, 7608, 7609]
+
+  // console.log(matchDetails.matchDetailsMap[0]);
+
+  // useEffect(() => (
+  // setData(matchDetails.matchDetailsMap)
+  // ))
   return (
     <div className="bg-white max-w-5xl grid grid-cols-1 md:grid-cols-2">
       <div className="bg-gray-800 text-white max-w-md m-1 p-4 space-y-4 max-h-44">
