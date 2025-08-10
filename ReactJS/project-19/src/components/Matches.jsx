@@ -3951,48 +3951,31 @@ const Matches = () => {
     },
   };
 
-  let [Data, setData] = useState([]);
-  // const seriesId = data.matchDetails[0].matchDetailsMap.match[0].matchInfo;
-    // console.log(data.matchDetails)
-  // const seriesIds = data.matchDetails.filter(
-  //   (item => item.matchDetailsMap).map(item) => console.log(item.matchDetailsMap)
-  // );
-  data.matchDetails
-  .filter(item => item.matchDetailsMap) 
-  .forEach(item => {
-    const map = item.matchDetailsMap;
+  // data.matchDetails
+  // .filter(item => item.matchDetailsMap) 
+  // .forEach(item => {
+  //   const map = item.matchDetailsMap;
+  //   let  k=  map.key;
+  //   map.match.forEach(matchItem => {
+  //     // console.log(matchItem.matchInfo.matchDesc);
+  //   });
+  // });
 
-    // Print the key before looping the matches
-    let  k=  map.key;
-
-    // Loop through the 'match' array
-    map.match.forEach(matchItem => {
-      console.log(k);
-      console.log(matchItem.matchInfo.matchDesc);
-    });
-  });
-
-
-// console.log(allMatchDetailsMap);
-
-
-  // console.log(seriesIds); // [7607, 7608, 7609]
-
-  // console.log(matchDetails.matchDetailsMap[0]);
-
-  // useEffect(() => (
-  // setData(matchDetails.matchDetailsMap)
-  // ))
   return (
     <div className="bg-white max-w-5xl grid grid-cols-1 md:grid-cols-2">
+    {data.matchDetails
+  .filter(item => item.matchDetailsMap) 
+  .flatMap(item => {
+    const map = item.matchDetailsMap;
+    const key = map.key;
+
+    return map.match.map(matchItem => (
+      // console.log(matchItem.matchInfo.matchDesc)
       <div className="bg-gray-800 text-white max-w-md m-1 p-4 space-y-4 max-h-44">
-        {/* First line */}
         <div className="flex justify-between text-sm">
           <p>1st Match</p>
-          <p>Fri, 22 Mar</p>
+          <p>{key}</p>
         </div>
-
-        {/* First team line */}
         <div className="flex justify-between items-center">
           <div className="flex items-center gap-2">
             <img
@@ -4023,120 +4006,8 @@ const Matches = () => {
         </div>
         <p className="text-center text-sm font-semibold">CsK won by 6 wkts</p>
       </div>
-      <div className="bg-gray-800 text-white max-w-md m-1 p-4 space-y-4 max-h-44">
-        {/* First line */}
-        <div className="flex justify-between text-sm">
-          <p>1st Match</p>
-          <p>Fri, 22 Mar</p>
-        </div>
-
-        {/* First team line */}
-        <div className="flex justify-between items-center">
-          <div className="flex items-center gap-2">
-            <img
-              src="https://via.placeholder.com/24"
-              alt="Rcb"
-              className="w-6 h-6 object-contain"
-            />
-            <p>Rcb</p>
-          </div>
-          <p>
-            173/<span>6</span>
-            <span>(20)</span>
-          </p>
-        </div>
-        <div className="flex justify-between items-center">
-          <div className="flex items-center gap-2">
-            <img
-              src="https://via.placeholder.com/24"
-              alt="Csk"
-              className="w-6 h-6 object-contain"
-            />
-            <p>CSK</p>
-          </div>
-          <p>
-            174/<span>4</span>
-            <span>(18.4)</span>
-          </p>
-        </div>
-        <p className="text-center text-sm font-semibold">CsK won by 6 wkts</p>
-      </div>
-      <div className="bg-gray-800 text-white max-w-md m-1 p-4 space-y-4 max-h-44">
-        {/* First line */}
-        <div className="flex justify-between text-sm">
-          <p>1st Match</p>
-          <p>Fri, 22 Mar</p>
-        </div>
-
-        {/* First team line */}
-        <div className="flex justify-between items-center">
-          <div className="flex items-center gap-2">
-            <img
-              src="https://via.placeholder.com/24"
-              alt="Rcb"
-              className="w-6 h-6 object-contain"
-            />
-            <p>Rcb</p>
-          </div>
-          <p>
-            173/<span>6</span>
-            <span>(20)</span>
-          </p>
-        </div>
-        <div className="flex justify-between items-center">
-          <div className="flex items-center gap-2">
-            <img
-              src="https://via.placeholder.com/24"
-              alt="Csk"
-              className="w-6 h-6 object-contain"
-            />
-            <p>CSK</p>
-          </div>
-          <p>
-            174/<span>4</span>
-            <span>(18.4)</span>
-          </p>
-        </div>
-        <p className="text-center text-sm font-semibold">CsK won by 6 wkts</p>
-      </div>
-      <div className="bg-gray-800 text-white max-w-md m-1 p-4 space-y-4 max-h-44">
-        {/* First line */}
-        <div className="flex justify-between text-sm">
-          <p>1st Match</p>
-          <p>Fri, 22 Mar</p>
-        </div>
-
-        {/* First team line */}
-        <div className="flex justify-between items-center">
-          <div className="flex items-center gap-2">
-            <img
-              src="https://via.placeholder.com/24"
-              alt="Rcb"
-              className="w-6 h-6 object-contain"
-            />
-            <p>Rcb</p>
-          </div>
-          <p>
-            173/<span>6</span>
-            <span>(20)</span>
-          </p>
-        </div>
-        <div className="flex justify-between items-center">
-          <div className="flex items-center gap-2">
-            <img
-              src="https://via.placeholder.com/24"
-              alt="Csk"
-              className="w-6 h-6 object-contain"
-            />
-            <p>CSK</p>
-          </div>
-          <p>
-            174/<span>4</span>
-            <span>(18.4)</span>
-          </p>
-        </div>
-        <p className="text-center text-sm font-semibold">CsK won by 6 wkts</p>
-      </div>
+    ));
+  })}     
     </div>
   );
 };
