@@ -3952,7 +3952,7 @@ const Matches = () => {
   };
 
   // data.matchDetails
-  // .filter(item => item.matchDetailsMap) 
+  // .filter(item => item.matchDetailsMap)
   // .forEach(item => {
   //   const map = item.matchDetailsMap;
   //   let  k=  map.key;
@@ -3961,53 +3961,108 @@ const Matches = () => {
   //   });
   // });
 
+  // const teamNamee = status.split("won")[0].trim();
+
+  let [teamName, setTeamName] = useState("");
+
   return (
     <div className="bg-white max-w-5xl grid grid-cols-1 md:grid-cols-2">
-    {data.matchDetails
-  .filter(item => item.matchDetailsMap) 
-  .flatMap(item => {
-    const map = item.matchDetailsMap;
-    const key = map.key;
+      {data.matchDetails
+        .filter((item) => item.matchDetailsMap)
+        .flatMap((item) => {
+          const map = item.matchDetailsMap;
+          const key = map.key;
 
-    return map.match.map(matchItem => (
-      // console.log(matchItem.matchInfo.matchDesc)
-      <div className="bg-gray-800 text-white max-w-md m-1 p-4 space-y-4 max-h-44">
-        <div className="flex justify-between text-sm">
-          <p>1st Match</p>
-          <p>{key}</p>
-        </div>
-        <div className="flex justify-between items-center">
-          <div className="flex items-center gap-2">
-            <img
-              src="https://via.placeholder.com/24"
-              alt="Rcb"
-              className="w-6 h-6 object-contain"
-            />
-            <p>Rcb</p>
-          </div>
-          <p>
-            173/<span>6</span>
-            <span>(20)</span>
-          </p>
-        </div>
-        <div className="flex justify-between items-center">
-          <div className="flex items-center gap-2">
-            <img
-              src="https://via.placeholder.com/24"
-              alt="Csk"
-              className="w-6 h-6 object-contain"
-            />
-            <p>CSK</p>
-          </div>
-          <p>
-            174/<span>4</span>
-            <span>(18.4)</span>
-          </p>
-        </div>
-        <p className="text-center text-sm font-semibold">CsK won by 6 wkts</p>
-      </div>
-    ));
-  })}     
+          return map.match.map(
+            ({
+              matchInfo: {
+                state,
+                status,
+                matchDesc,
+                team1: { teamSName: team1SName, teamName : Tfn1, imageId: im1 },
+                team2: { teamSName: team2SName, teamName : Tfn2, imageId: im2 },
+              },
+              matchScore: {
+                team1Score: {
+                  inngs1: { runs: r1, wickets: w1, overs: o1 } = {},
+                } = {},
+              } = {},
+              matchScore: {
+                team2Score: {
+                  inngs1: { runs: r2, wickets: w2, overs: o2 } = {},
+                } = {},
+              } = {},
+            }) => (
+              // console.log(matchItem.matchInfo.matchDesc)
+              <div className="bg-gray-800 text-white max-w-md m-1 p-4 space-y-4 max-h-44">
+                <div className="flex justify-between text-sm">
+                  <p>{matchDesc}</p>
+                  <p>{key}</p>
+                </div>
+                <div className="flex justify-between items-center">
+                  <div className="flex items-center gap-2">
+                    <img
+                      src={`https://res.cloudinary.com/digkgdovw/image/upload/v1715267650/iplTeamLogo/${im1}`}
+                      alt="Rcb"
+                      className="w-6 h-6 object-contain"
+                    />
+                    <p>{team1SName}</p>
+                  </div>
+                  {typeof r2 === "number" ||
+                  (r2 && Object.keys(r2).length > 0) ? (
+                    <p>
+                      {r1}/<span>{w1}</span>
+                      <span>({o1})</span>
+                    </p>
+                  ) : (
+                    <p></p>
+                  )}
+                </div>
+                <div className="flex justify-between items-center">
+                  <div className="flex items-center gap-2">
+                    <img
+                      src={`https://res.cloudinary.com/digkgdovw/image/upload/v1715267650/iplTeamLogo/${im2}`}
+                      alt="Csk"
+                      className="w-6 h-6 object-contain"
+                    />
+                    <p>{team2SName}</p>
+                  </div>
+                  {typeof r1 === "number" ||
+                  (r1 && Object.keys(r1).length > 0) ? (
+                    <p>
+                      {r2}/<span>{w2}</span>
+                      <span>({o2})</span>
+                    </p>
+                  ) : (
+                    <p></p>
+                  )}
+                </div>
+                {useEffect(() => {
+                  if (status) {
+                    const winnerLongName = status.split("won")[0].trim();
+                    console.log(winnerLongName);
+                    console.log(Tfn1.trim());
+                    
+                    if (winnerLongName === Tfn1.trim()) {
+                      setTeamName("Abc");
+                    } else {
+                      setTeamName("Def");
+                    }
+                  }
+                }, [status, Tfn1])}
+
+                {state === "Complete" ? (
+                  <p className="text-center text-sm font-semibold">
+                    {teamName} 
+                    {status.split("won")[1]?.trim()}
+                  </p>
+                ) : (
+                  <p></p>
+                )}
+              </div>
+            )
+          );
+        })}
     </div>
   );
 };
