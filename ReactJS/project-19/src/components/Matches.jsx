@@ -3979,8 +3979,8 @@ const Matches = () => {
                 state,
                 status,
                 matchDesc,
-                team1: { teamSName: team1SName, teamName : Tfn1, imageId: im1 },
-                team2: { teamSName: team2SName, teamName : Tfn2, imageId: im2 },
+                team1: { teamSName: team1SName, teamName: Tfn1, imageId: im1 },
+                team2: { teamSName: team2SName, teamName: Tfn2, imageId: im2 },
               },
               matchScore: {
                 team1Score: {
@@ -4037,28 +4037,11 @@ const Matches = () => {
                     <p></p>
                   )}
                 </div>
-                {useEffect(() => {
-                  if (status) {
-                    const winnerLongName = status.split("won")[0].trim();
-                    console.log(winnerLongName);
-                    console.log(Tfn1.trim());
-                    
-                    if (winnerLongName === Tfn1.trim()) {
-                      setTeamName("Abc");
-                    } else {
-                      setTeamName("Def");
-                    }
-                  }
-                }, [status, Tfn1])}
-
-                {state === "Complete" ? (
-                  <p className="text-center text-sm font-semibold">
-                    {teamName} 
-                    {status.split("won")[1]?.trim()}
-                  </p>
-                ) : (
-                  <p></p>
-                )}
+                {state === "Complete"
+                  ? status.split(" won")[0] === Tfn1
+                    ? <p className="text-center text-sm font-semibold">{team1SName + " won " + status.split("won ")[1]}</p>
+                    :<p className="text-center text-sm font-semibold">{team2SName + " won " + status.split("won ")[1]}</p> 
+                  : status}
               </div>
             )
           );
