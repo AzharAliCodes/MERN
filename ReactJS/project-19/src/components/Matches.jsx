@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from 'react-router-dom'
 
 const Matches = () => {
   let data = {
@@ -3976,6 +3977,7 @@ const Matches = () => {
           return map.match.map(
             ({
               matchInfo: {
+                matchId,
                 state,
                 status,
                 matchDesc,
@@ -3995,6 +3997,7 @@ const Matches = () => {
             }) => (
               // console.log(matchItem.matchInfo.matchDesc)
               <div className="bg-gray-800 text-white max-w-md m-1 p-4 space-y-4 max-h-44">
+                <Link to={`matchdetail/${matchId}`} >
                 <div className="flex justify-between text-sm">
                   <p>{matchDesc}</p>
                   <p>{key}</p>
@@ -4042,6 +4045,7 @@ const Matches = () => {
                     ? <p className="text-center text-sm font-semibold">{team1SName + " won " + status.split("won ")[1]}</p>
                     :<p className="text-center text-sm font-semibold">{team2SName + " won " + status.split("won ")[1]}</p> 
                   : status}
+                </Link>
               </div>
             )
           );

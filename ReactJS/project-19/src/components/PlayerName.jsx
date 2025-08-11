@@ -1,5 +1,6 @@
 import React from "react";
 
+
 const PlayerName = () => {
   return (
     <div className="flex justify-center items-center h-screen bg-slate-800 text-white text-center px-4">
